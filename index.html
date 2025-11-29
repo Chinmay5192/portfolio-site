@@ -1,102 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Chinmay | Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <title>Chinmay | DevOps & Cloud Enthusiast</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Simple Google Font (optional) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-        header {
-            background: #222;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
+
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            background: #0f172a;               /* dark navy */
+            color: #e5e7eb;                     /* light gray */
+            line-height: 1.6;
         }
-        .container {
+
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* ---------- Layout ---------- */
+
+        .page {
             max-width: 900px;
-            margin: 20px auto;
-            padding: 0 15px;
+            margin: 0 auto;
+            padding: 20px 16px 40px;
         }
-        h1, h2, h3 {
-            margin-top: 0;
+
+        header {
+            background: linear-gradient(135deg, #1d4ed8, #0ea5e9);
+            border-radius: 18px;
+            padding: 24px 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 15px 30px rgba(15, 23, 42, 0.6);
+            margin-top: 16px;
+            margin-bottom: 26px;
         }
+
+        header h1 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        header p.subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        header .tags {
+            font-size: 13px;
+            opacity: 0.95;
+        }
+
+        .contact-line {
+            font-size: 13px;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        /* ---------- Sections ---------- */
+
         .section {
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #ddd;
+            background: #020617;
+            border-radius: 18px;
+            padding: 18px 16px 16px;
+            margin-bottom: 18px;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.7);
+            border: 1px solid #1e293b;
         }
+
+        .section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            border-left: 4px solid #38bdf8;
+            padding-left: 8px;
+        }
+
+        .section h3 {
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+
+        .section p,
+        .section li {
+            font-size: 13px;
+            color: #e5e7eb;
+        }
+
         ul {
             padding-left: 18px;
+            margin-top: 4px;
         }
+
+        .pill {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: #1d4ed8;
+            font-size: 12px;
+            margin: 2px 4px 4px 0;
+        }
+
+        .pill.light {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+        }
+
+        /* ---------- Responsive ---------- */
+
+        @media (min-width: 720px) {
+            header h1 {
+                font-size: 36px;
+            }
+
+            .section-grid {
+                display: grid;
+                grid-template-columns: 1.2fr 1fr;
+                gap: 16px;
+            }
+        }
+
         footer {
             text-align: center;
-            font-size: 14px;
-            padding: 15px;
-            border-top: 1px solid #eee;
-            margin-top: 20px;
+            font-size: 12px;
+            margin-top: 16px;
+            color: #9ca3af;
         }
     </style>
 </head>
+
 <body>
+<div class="page">
+
+    <!-- HEADER -->
     <header>
         <h1>Chinmay Sardesai</h1>
-        <p>Cloud & DevOps Enthusiast | Linux • Git • GitHub • AWS (Learning)
-        <p>DevOps Trainee at SkillEcted Pvt. Ltd., Pune | Linux • Git • AWS • CI/CD • Cloud</p>
-</p>
-       
-
+        <p class="subtitle">
+            DevOps & Cloud Enthusiast • CSE Graduate
+        </p>
+        <p class="tags">
+            DevOps Trainee at SkillEcted Pvt. Ltd., Pune • Linux • Git • GitHub • AWS (Learning) • CI/CD Basics
+        </p>
+        <p class="contact-line">
+            📍 Sangli • 📧
+            <a href="mailto:chinmaysardesai1111@gmail.com">chinmaysardesai1111@gmail.com</a>
+            • 📞 8080207279
+        </p>
+        <p class="contact-line">
+            🔗
+            <a href="https://www.linkedin.com/in/chinmay-sardesai-a85935331" target="_blank">LinkedIn</a>
+            &nbsp;|&nbsp;
+            <a href="https://github.com/Chinmay5192" target="_blank">GitHub</a>
+            &nbsp;|&nbsp;
+            <a href="https://chinmay5192.github.io/portfolio-site" target="_blank">Portfolio</a>
+        </p>
     </header>
 
-    <div class="container">
-        <section class="section">
+    <!-- ABOUT + TRAINING -->
+    <section class="section section-grid">
+        <div>
             <h2>About Me</h2>
-             <p>
-I am currently pursuing a DevOps training program at SkillEcted Pvt. Ltd., Pune.
-I have completed 2 months of hands-on learning including Linux, Git, GitHub, CI/CD fundamentals,
-and AWS Cloud basics. Working on real-time projects to build practical deployment skills.
-</p>
             <p>
-                I am a Computer Science & Engineering graduate with hands-on knowledge of Linux, 
-                Git and GitHub. I am currently learning Cloud technologies with AWS and interested 
-                in roles like Cloud Engineer, DevOps Engineer and Linux Administrator.
+                I am a Computer Science & Engineering graduate with hands-on knowledge of Linux, Git and GitHub.
+                I enjoy learning how applications are deployed, monitored and automated using cloud technologies.
+                I am interested in roles like <b>DevOps Engineer</b>, <b>Cloud Engineer</b> and
+                <b>Linux Administrator</b>.
             </p>
-        </section>
+        </div>
 
-        <section class="section">
-            <h2>Skills</h2>
+        <div>
+            <h2>Current DevOps Training</h2>
+            <p>
+                I am currently pursuing a <b>DevOps training program at SkillEcted Pvt. Ltd., Pune</b>.
+                I have completed <b>2 months</b> of hands-on learning including:
+            </p>
             <ul>
-                <li><strong>Operating System:</strong> Linux (basic commands, file system, permissions)</li>
-                <li><strong>Version Control:</strong> Git & GitHub (init, commit, branch, push, pull)</li>
-                <li><strong>Cloud:</strong> AWS (S3 basics – static website hosting, IAM basics)</li>
-                <li><strong>Other:</strong> HTML (basic), problem solving, willingness to learn</li>
+                <li>Linux basics, users, permissions and shell</li>
+                <li>Git & GitHub workflow (branches, commits, pull / push)</li>
+                <li>Introduction to CI/CD pipelines</li>
+                <li>AWS Cloud basics and deployment concepts</li>
             </ul>
-        </section>
+        </div>
+    </section>
 
-        <section class="section">
-            <h2>Projects</h2>
-            <h3>Portfolio Website using Linux, Git, GitHub & AWS S3</h3>
-            <ul>
-                <li>Developed a static portfolio website using HTML.</li>
-                <li>Managed source code using Git and pushed changes to GitHub repository.</li>
-                <li>Initially deployed the website using GitHub Pages for free hosting.</li>
-                <li>Later migrated the deployment to AWS S3 static website hosting.</li>
-            </ul>
-        </section>
+    <!-- SKILLS -->
+    <section class="section">
+        <h2>Skills</h2>
 
-        <section class="section">
-            <h2>Contact</h2>
-            <p>Email: youremail@example.com</p>
-            <p>GitHub: https://github.com/your-username</p>
-        </section>
-    </div>
+        <h3>Cloud & DevOps</h3>
+        <p>
+            <span class="pill">Linux (CLI, file system, permissions)</span>
+            <span class="pill">Git & GitHub</span>
+            <span class="pill">AWS (S3 basics)</span>
+            <span class="pill">Basic CI/CD concepts</span>
+        </p>
+
+        <h3 style="margin-top:10px;">Programming & Web</h3>
+        <p>
+            <span class="pill light">Python</span>
+            <span class="pill light">HTML</span>
+            <span class="pill light">CSS</span>
+        </p>
+
+        <h3 style="margin-top:10px;">Tools & Database</h3>
+        <p>
+            <span class="pill light">VS Code</span>
+            <span class="pill light">Git CLI</span>
+            <span class="pill light">MySQL</span>
+        </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section">
+        <h2>Projects</h2>
+
+        <h3>Portfolio Website using Linux, Git, GitHub & GitHub Pages (AWS S3 Upcoming)</h3>
+        <ul>
+            <li>Developed a static portfolio website using HTML in a Linux environment.</li>
+            <li>Managed source code through Git and GitHub with proper commit history.</li>
+            <li>Deployed the website using GitHub Pages for public hosting.</li>
+            <li>Next step: migrate hosting to AWS S3 static website hosting.</li>
+            <li>Built and managed using CLI commands, improving confidence with Linux & Git.</li>
+        </ul>
+        <p style="margin-top:6px;">
+            🔗 Live Link:
+            <a href="https://chinmay5192.github.io/portfolio-site" target="_blank">
+                chinmay5192.github.io/portfolio-site
+            </a>
+        </p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section">
+        <h2>Education</h2>
+        <p><b>BE – Computer Science & Engineering</b></p>
+        <p>Shivaji University, Kolhapur (2021 – 2025)</p>
+    </section>
+
+    <!-- CONTACT / FOOTER INFO -->
+    <section class="section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:chinmaysardesai1111@gmail.com">chinmaysardesai1111@gmail.com</a></p>
+        <p>Phone: 8080207279</p>
+        <p>Location: Sangli / Pune (open to relocation)</p>
+    </section>
 
     <footer>
-        © 2025 Chinmay Sardesai – Portfolio Website Project
+        © 2025 Chinmay Sardesai – Portfolio & DevOps Learning Journey
     </footer>
+</div>
 </body>
 </html>
-
