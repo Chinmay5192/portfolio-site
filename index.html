@@ -1,376 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Chinmay | DevOps & Cloud Enthusiast</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8" />
+<title>Chinmay | DevOps & Cloud Enthusiast</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <style>
-        * .resume-btn {
-  background: #007bff;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 25px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s ease;
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+font-family:Poppins,Arial,sans-serif;
+background:#020617;
+color:#e5e7eb;
 }
-
-.resume-btn:hover {
-  background: #0056b3;
-  transform: scale(1.05);
+.page{max-width:900px;margin:auto;padding:20px}
+header{
+background:linear-gradient(135deg,#1d4ed8,#0ea5e9);
+border-radius:18px;
+padding:25px;
+color:#fff;
+text-align:center;
+margin-bottom:20px;
 }
-
-        .cert-btn {
-  padding: 10px 20px;
-  margin: 10px;
-  border-radius: 12px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  border: none;
-  color: white;
+header h1{font-size:32px}
+.section{
+background:#020617;
+border-radius:18px;
+padding:18px;
+margin-bottom:18px;
+border:1px solid #1e293b;
 }
-
-.blue { background-color: #2196F3; }
-.green { background-color: #4CAF50; }
-.red { background-color: #E53935; }
-
-        {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: "Poppins", Arial, sans-serif;
-            background: #0f172a;               
-            color: black;                     
-            line-height: 1.6;
-        }
-
-        a {
-            color: #38bdf8;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        
-
-        .page {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px 16px 40px;
-        }
-
-        header {
-            background: linear-gradient(135deg, #1d4ed8, #0ea5e9);
-            border-radius: 18px;
-            padding: 24px 20px;
-            text-align: center;
-            color: white;
-            box-shadow: 0 15px 30px rgba(15, 23, 42, 0.6);
-            margin-top: 16px;
-            margin-bottom: 26px;
-        }
-
-        header h1 {
-            font-size: 32px;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-
-        header p.subtitle {
-            font-size: 14px;
-            opacity: 0.9;
-            margin-bottom: 10px;
-        }
-
-        header .tags {
-            font-size: 13px;
-            opacity: 0.95;
-        }
-
-        .contact-line {
-            font-size: 13px;
-            margin-top: 10px;
-            opacity: 0.9;
-        }
-
-        
-
-        .section {
-            background: #020617;
-            border-radius: 18px;
-            padding: 18px 16px 16px;
-            margin-bottom: 18px;
-            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.7);
-            border: 1px solid #1e293b;
-        }
-
-        .section h2 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            border-left: 4px solid #38bdf8;
-            padding-left: 8px;
-        }
-
-        .section h3 {
-            font-size: 15px;
-            margin-bottom: 6px;
-        }
-
-        .section p,
-        .section li {
-            font-size: 13px;
-            color: #e5e7eb;
-        }
-
-        ul {
-            padding-left: 18px;
-            margin-top: 4px;
-        }
-
-        .pill {
-            display: inline-block;
-            padding: 4px 10px;
-            border-radius: 999px;
-            background: #1d4ed8;
-            font-size: 12px;
-            margin: 2px 4px 4px 0;
-        }
-
-        .pill.light {
-            background: #0f172a;
-            border: 1px solid #1e293b;
-        }
-
-        
-
-        @media (min-width: 720px) {
-            header h1 {
-                font-size: 36px;
-            }
-
-            .section-grid {
-                display: grid;
-                grid-template-columns: 1.2fr 1fr;
-                gap: 16px;
-            }
-        }
-
-        footer {
-            text-align: center;
-            font-size: 12px;
-            margin-top: 16px;
-            color: #9ca3af;
-        }
-        .resume-top-btn {
-  position: absolute;
-  top: 120px;  
-  right: 50px;
-  z-index: 1000;
+.section h2{
+border-left:4px solid #38bdf8;
+padding-left:10px;
+margin-bottom:10px;
 }
-
-.resume-btn {
-  background: #0080ff;
-  color: white;
-  padding: 12px 28px;
-  border-radius: 25px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
+ul{padding-left:18px}
+.resume-btn{
+background:#0080ff;
+color:#fff;
+padding:12px 28px;
+border-radius:25px;
+border:none;
+font-weight:600;
+cursor:pointer;
 }
-
-.resume-btn:hover {
-  background: #005fcc;
-  transform: scale(1.08);
+.resume-btn:hover{background:#005fcc}
+.cert-btn{
+padding:10px 20px;
+margin:6px;
+border-radius:12px;
+border:none;
+color:white;
+font-weight:600;
+cursor:pointer;
 }
-
-       
-
-    </style>
+.blue{background:#2196F3}
+.green{background:#4CAF50}
+.red{background:#E53935}
+footer{text-align:center;font-size:12px;color:#9ca3af}
+</style>
 </head>
 
 <body>
 <div class="page">
 
+<header>
+<h1>Chinmay Nitin Sardesai</h1>
+<p>DevOps & Cloud Enthusiast • CSE Graduate</p>
+<p>Linux • Git • GitHub • AWS • CI/CD Basics</p>
 
-  <header>
-    <div style="display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;">
-        <div>
-            <h1>Chinmay Nitin Sardesai</h1>
-            <p class="subtitle">
-                DevOps & Cloud Enthusiast • CSE Graduate
-            </p>
-            <p class="tags">
-                DevOps Trainee at SkillEcted Pvt. Ltd., Pune • Linux • Git • GitHub • AWS (learning) • CI/CD Basics
-            </p>
-           <p class="contact-line">
-    📍 Sangli &nbsp;|&nbsp;
-    📧 <a href="mailto:chinmaysardesai1111@gmail.com">chinmaysardesai1111@gmail.com</a>
-    &nbsp;|&nbsp; 📞 <a href="tel:8080207279">8080207279</a>
+<p>
+📍 Sangli |
+📧 chinmaysardesai1111@gmail.com |
+📞 8080207279
 </p>
 
-            <p class="contact-line">
-                🔗
-                <a href="https://www.linkedin.com/in/chinmay-sardesai-a85935331" target="_blank">LinkedIn</a>
-                &nbsp;|&nbsp;
-                <a href="https://github.com/Chinmay5192" target="_blank">GitHub</a>
-                &nbsp;|&nbsp;
-                <a href="https://chinmay5192.github.io/portfolio-site" target="_blank">Portfolio</a>
-            </p>
-        </div>
-        <div style="text-align:right; margin-top: -40px; margin-right: 20px;">
-  <a href="Chinmay-Sardesai-Resume.pdf" download>
-    <button class="resume-btn">↓ Download Resume</button>
-  </a>
-</div>
-        
-  
-
-    <section class="section section-grid">
-        <div>
-            <h2>About Me</h2>
-            <p>
-                I am a Computer Science & Engineering graduate with hands-on knowledge of Linux, Git and GitHub.
-                I enjoy learning how applications are deployed, monitored and automated using cloud technologies.
-                I am interested in roles like <b>DevOps Engineer</b>, <b>Cloud Engineer</b> and
-                <b>Linux Administrator</b>.
-            </p>
-        </div>
-      
-
-        <div>
-            <h2>Current DevOps Training</h2>
-            <p>
-                I am currently pursuing a <b>DevOps training program at SkillEcted Pvt. Ltd., Pune</b>.
-                I have completed <b>2 months</b> of hands-on learning including:
-            </p>
-            <ul>
-                <li>Linux basics, users, permissions and shell</li>
-                <li>Git & GitHub workflow (branches, commits, pull / push)</li>
-                <li>Introduction to CI/CD pipelines</li>
-                <li>AWS Cloud basics and deployment concepts</li>
-            </ul>
-        </div>
-    </section>
-
-    
-    <section class="section">
-        <h2>Skills</h2>
-
-        <h3>Cloud & DevOps</h3>
-        <p>
-            <span class="pill">Linux (CLI, file system, permissions)</span>
-            <span class="pill">Git & GitHub</span>
-            <span class="pill">AWS (S3 basics)</span>
-            <span class="pill">Basic CI/CD concepts</span>
-        </p>
-
-        <h3 style="margin-top:10px;">Programming & Web</h3>
-        <p>
-            <span class="pill light">Python</span>
-            <span class="pill light">HTML</span>
-            <span class="pill light">CSS</span>
-        </p>
-
-        <h3 style="margin-top:10px;">Tools & Database</h3>
-        <p>
-            <span class="pill light">VS Code</span>
-            <span class="pill light">Git CLI</span>
-            <span class="pill light">MySQL</span>
-        </p>
-    </section>
-
-    
-    <section class="section">
-        <h2>Projects</h2>
-        <h3>Portfolio Website Deployment on AWS EC2</h3>
-<ul>
-  <li>Learned AWS EC2 by launching and managing a Linux instance.</li>
-  <li>Connected to EC2 using SSH and performed Linux operations.</li>
-  <li>Installed and configured Apache (httpd) web server.</li>
-  <li>Hosted my personal portfolio website on AWS EC2.</li>
-  <li>Configured Security Groups for HTTP (80) and SSH (22).</li>
-  <li>Accessed the live website using EC2 Public IP.</li>
-</ul>
-
-<p><b>Technologies Used:</b> Linux, Git, GitHub, Apache, AWS EC2</p>
-
-
-        <h3>Portfolio Website using Linux, Git, GitHub & GitHub Pages (AWS S3 Upcoming)</h3>
-        <ul>
-            <li>Developed a static portfolio website using HTML in a Linux environment.</li>
-            <li>Managed source code through Git and GitHub with proper commit history.</li>
-            <li>Deployed the website using GitHub Pages for public hosting.</li>
-            <li>Next step: migrate hosting to AWS S3 static website hosting.</li>
-            <li>Built and managed using CLI commands, improving confidence with Linux & Git.</li>
-        </ul>
-       
-    </section>
+<a href="Chinmay-Sardesai-Resume.pdf" download>
+<button class="resume-btn">↓ Download Resume</button>
+</a>
+</header>
 
 <section class="section">
-    <h2>Certificates & Achievements</h2>
-
-    <p><b>Internship – Python Developer</b><br>
-    Company: WOLFOX Services Pvt. Ltd., Kolhapur<br>
-    Duration: 15th Dec 2023 – 31st Jan 2024<br>
-    Successfully completed internship as an Intern Python Developer at WOLFOX demonstrating work ethic, leadership & team player skills.</p>
-
-    <p><b>Quantum 2k23 – Mock Placement (National Level Technical Symposium)</b><br>
-    Participated and performed in Mock Placement event at D.Y. Patil Technical Campus, Talsande.</p>
-
-    <p><b>Quantum 2k24 – Mock Placement (National Level Technical Symposium)</b><br>
-    Awarded certificate for performance in Mock Placement event at D.Y. Patil Technical Campus, Talsande.</p>
-
-    <br>
-
-    <div style="text-align:center;">
-        <a href="cert-quantum-2k23.jpg" target="_blank">
-            <button class="cert-btn blue">View Quantum 2k23 Certificate</button>
-        </a>
-
-        <a href="cert-wolfox-internship.jpg" target="_blank">
-            <button class="cert-btn green">View Internship Certificate</button>
-        </a>
-
-        <a href="cert-quantum-2k24.jpg" target="_blank">
-            <button class="cert-btn red">View Quantum 2k24 Certificate</button>
-        </a>
-    </div>
+<h2>About Me</h2>
+<p>
+Computer Science graduate with hands-on experience in Linux, Git, GitHub and AWS.
+Interested in DevOps Engineer, Cloud Engineer & Linux Administrator roles.
+</p>
 </section>
 
-    
-    <section class="section">
-        <h2>Education</h2>
-        <p><b>BE – Computer Science & Engineering</b></p>
-        <p>Shivaji University, Kolhapur (2021 – 2025)</p>
-    </section>
+<section class="section">
+<h2>Current DevOps Training</h2>
+<ul>
+<li>Linux basics, permissions & shell</li>
+<li>Git & GitHub workflow</li>
+<li>CI/CD basics</li>
+<li>AWS EC2 & deployment concepts</li>
+</ul>
+</section>
 
-    
-    <section class="section">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:chinmaysardesai1111@gmail.com">chinmaysardesai1111@gmail.com</a></p>
-        <p>Phone: 8080207279</p>
-        <p>Location: Sangli / Pune (open to relocation)</p>
-    </section>
+<!-- 🔥 EC2 PROJECT ADDED HERE -->
+<section class="section">
+<h2>Projects</h2>
 
-    <footer>
-        © 2025 Chinmay Nitin Sardesai – Portfolio & DevOps Learning Journey
-    </footer>
+<h3>Portfolio Website Deployment on AWS EC2</h3>
+<ul>
+<li>Launched and managed a Linux EC2 instance.</li>
+<li>Connected using SSH and performed Linux operations.</li>
+<li>Installed and configured Apache (httpd).</li>
+<li>Deployed personal portfolio website on EC2.</li>
+<li>Configured Security Groups (HTTP & SSH).</li>
+<li>Accessed website using EC2 Public IP.</li>
+</ul>
+<p><b>Technologies:</b> Linux, Git, GitHub, Apache, AWS EC2</p>
+
+<br>
+
+<h3>Portfolio Website using GitHub Pages</h3>
+<ul>
+<li>Developed static website using HTML & CSS.</li>
+<li>Version control with Git & GitHub.</li>
+<li>Hosted using GitHub Pages.</li>
+</ul>
+</section>
+
+<section class="section">
+<h2>Certificates & Achievements</h2>
+<p><b>Python Internship – WOLFOX Services Pvt. Ltd.</b></p>
+<p>Quantum 2k23 & 2k24 – Mock Placement Certificates</p>
+
+<div style="text-align:center">
+<button class="cert-btn blue">Quantum 2k23</button>
+<button class="cert-btn green">Internship</button>
+<button class="cert-btn red">Quantum 2k24</button>
+</div>
+</section>
+
+<section class="section">
+<h2>Education</h2>
+<p>BE – Computer Science & Engineering</p>
+<p>Shivaji University, Kolhapur (2021–2025)</p>
+</section>
+
+<footer>
+© 2025 Chinmay Sardesai | DevOps Portfolio
+</footer>
+
 </div>
 </body>
 </html>
