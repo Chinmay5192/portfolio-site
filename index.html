@@ -10,6 +10,32 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 
+  .cert-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.cert-card{
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
+}
+
+.cert-card img{
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.cert-card img:hover{
+  transform: scale(1.05);
+}
+
+
 body{
   font-family:Poppins,Arial,sans-serif;
   background:#020617;
@@ -179,26 +205,32 @@ Interested in DevOps Engineer, Cloud Engineer & Linux Administrator roles.
 <section class="section">
 <h2>Certificates & Achievements</h2>
 
-<div class="cert-section">
-  <div class="cert-top">
-    <a href="certificates/internship.pdf" target="_blank" class="cert-btn green">
+<div class="cert-grid">
+
+  <div class="cert-card">
+    <img src="cert-wolfox-internship.jpg" alt="Internship Certificate">
+    <a href="cert-wolfox-internship.jpg" target="_blank" class="cert-btn green">
       Internship
     </a>
   </div>
 
-  <div class="cert-bottom">
-    <a href="certificates/quantum2k23.pdf" target="_blank" class="cert-btn blue">
+  <div class="cert-card">
+    <img src="cert-quantum-2k23.jpg" alt="Quantum 2k23 Certificate">
+    <a href="cert-quantum-2k23.jpg" target="_blank" class="cert-btn blue">
       Quantum 2k23
     </a>
+  </div>
 
-    <a href="certificates/quantum2k24.pdf" target="_blank" class="cert-btn red">
+  <div class="cert-card">
+    <img src="cert-quantum-2k24.jpg" alt="Quantum 2k24 Certificate">
+    <a href="cert-quantum-2k24.jpg" target="_blank" class="cert-btn red">
       Quantum 2k24
     </a>
   </div>
+
 </div>
-
 </section>
-
+  
 <section class="section">
 <h2>Education</h2>
 <p>BTech – Computer Science & Engineering</p>
