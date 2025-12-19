@@ -8,102 +8,110 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-  .cert-buttons {
-  margin-top: 15px;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.cert-btn {
-  text-decoration: none;
-  padding: 12px 22px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
-  color: #fff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.cert-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-
-.cert-btn.blue {
-  background-color: #4da6ff;
-}
-
-.cert-btn.green {
-  background-color: #3cb371;
-}
-
-.cert-btn.red {
-  background-color: #ff6b6b;
-}
-
 *{box-sizing:border-box;margin:0;padding:0}
+
 body{
-font-family:Poppins,Arial,sans-serif;
-background:#020617;
-color:#e5e7eb;
+  font-family:Poppins,Arial,sans-serif;
+  background:#020617;
+  color:#e5e7eb;
 }
-.page{max-width:900px;margin:auto;padding:20px}
+
+.page{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+
+/* HEADER */
 header{
-background:linear-gradient(135deg,#1d4ed8,#0ea5e9);
-border-radius:18px;
-padding:25px;
-color:#fff;
-text-align:center;
-margin-bottom:20px;
+  background:linear-gradient(135deg,#1d4ed8,#0ea5e9);
+  border-radius:18px;
+  padding:25px;
+  color:#fff;
+  text-align:center;
+  margin-bottom:20px;
 }
+
 header h1{font-size:32px}
+header p{margin-top:6px}
+
+/* SECTIONS */
 .section{
-background:#020617;
-border-radius:18px;
-padding:18px;
-margin-bottom:18px;
-border:1px solid #1e293b;
+  background:#020617;
+  border-radius:18px;
+  padding:18px;
+  margin-bottom:18px;
+  border:1px solid #1e293b;
 }
+
 .section h2{
-border-left:4px solid #38bdf8;
-padding-left:10px;
-margin-bottom:10px;
+  border-left:4px solid #38bdf8;
+  padding-left:10px;
+  margin-bottom:10px;
 }
+
 ul{padding-left:18px}
+
+/* RESUME BUTTON */
 .resume-btn{
-background:#0080ff;
-color:#fff;
-padding:12px 28px;
-border-radius:25px;
-border:none;
-font-weight:600;
-cursor:pointer;
-}
-.resume-btn{
-background: #ffffff;          
-color: #0f172a;               
-padding: 12px 30px;
-border-radius: 30px;
-border: 2px solid #0ea5e9;   
-font-weight: 600;
-cursor: pointer;
-margin-top: 10px;
-transition: 0.3s ease;
+  background:#ffffff;
+  color:#0f172a;
+  padding:12px 30px;
+  border-radius:30px;
+  border:2px solid #0ea5e9;
+  font-weight:600;
+  cursor:pointer;
+  margin-top:15px;
+  transition:0.3s ease;
 }
 
 .resume-btn:hover{
-background: #0ea5e9;          
-color: #ffffff;
-transform: scale(1.05);
+  background:#0ea5e9;
+  color:#ffffff;
+  transform:scale(1.05);
 }
 
+/* CERTIFICATE BUTTONS */
+.cert-section{
+  margin-top:15px;
 }
-.blue{background:#2196F3}
-.green{background:#4CAF50}
-.red{background:#E53935}
-footer{text-align:center;font-size:12px;color:#9ca3af}
+
+.cert-top{
+  margin-bottom:15px;
+}
+
+.cert-bottom{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.cert-btn{
+  text-decoration:none;
+  padding:12px 22px;
+  border-radius:8px;
+  font-size:15px;
+  font-weight:600;
+  color:#fff;
+  transition:0.2s ease;
+}
+
+.cert-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.cert-btn.blue{background:#4da6ff}
+.cert-btn.green{background:#3cb371}
+.cert-btn.red{background:#ff6b6b}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  font-size:12px;
+  color:#9ca3af;
+  margin-top:20px;
+}
 </style>
 </head>
 
@@ -111,19 +119,19 @@ footer{text-align:center;font-size:12px;color:#9ca3af}
 <div class="page">
 
 <header>
-<h1>Chinmay Nitin Sardesai</h1>
-<p>DevOps & Cloud Enthusiast • CSE Graduate</p>
-<p>Linux • Git • GitHub • AWS • CI/CD Basics</p>
+  <h1>Chinmay Nitin Sardesai</h1>
+  <p>DevOps & Cloud Enthusiast • CSE Graduate</p>
+  <p>Linux • Git • GitHub • AWS • CI/CD Basics</p>
 
-<p>
-📍 Sangli |
-📧 chinmaysardesai1111@gmail.com |
-📞 8080207279
-</p>
+  <p>
+    📍 Sangli |
+    📧 chinmaysardesai1111@gmail.com |
+    📞 8080207279
+  </p>
 
-<a href="Chinmay-Sardesai-Resume.pdf" download>
-<button class="resume-btn">↓ Download Resume</button>
-</a>
+  <a href="Chinmay-Sardesai-Resume.pdf" download>
+    <button class="resume-btn">↓ Download Resume</button>
+  </a>
 </header>
 
 <section class="section">
@@ -144,7 +152,6 @@ Interested in DevOps Engineer, Cloud Engineer & Linux Administrator roles.
 </ul>
 </section>
 
-<!-- 🔥 EC2 PROJECT ADDED HERE -->
 <section class="section">
 <h2>Projects</h2>
 
@@ -171,15 +178,13 @@ Interested in DevOps Engineer, Cloud Engineer & Linux Administrator roles.
 
 <section class="section">
 <h2>Certificates & Achievements</h2>
-  <div class="cert-section">
 
-
+<div class="cert-section">
   <div class="cert-top">
     <a href="certificates/internship.pdf" target="_blank" class="cert-btn green">
       Internship
     </a>
   </div>
-
 
   <div class="cert-bottom">
     <a href="certificates/quantum2k23.pdf" target="_blank" class="cert-btn blue">
@@ -190,15 +195,13 @@ Interested in DevOps Engineer, Cloud Engineer & Linux Administrator roles.
       Quantum 2k24
     </a>
   </div>
-
 </div>
 
-  
 </section>
 
 <section class="section">
 <h2>Education</h2>
-<p>Btech – Computer Science & Engineering</p>
+<p>BTech – Computer Science & Engineering</p>
 <p>Shivaji University, Kolhapur (2021–2025)</p>
 </section>
 
