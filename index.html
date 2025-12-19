@@ -1,197 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Chinmay | DevOps & Cloud Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <title>Chinmay | DevOps & Cloud Enthusiast</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #020617;
-      color: #e5e7eb;
-    }
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    header {
-      background: linear-gradient(135deg, #0284c7, #0ea5e9);
-      padding: 40px 20px;
-      text-align: center;
-      border-radius: 0 0 20px 20px;
-      position: relative;
-    }
+    <style>
+        * .resume-btn {
+  background: #007bff;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
+.resume-btn:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
 
-    .subtitle {
-      font-size: 16px;
-      font-weight: bold;
-      margin-top: 6px;
-    }
+        .cert-btn {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
 
-    .skills, .contact {
-      font-size: 14px;
-      margin-top: 8px;
-    }
+.blue { background-color: #2196F3; }
+.green { background-color: #4CAF50; }
+.red { background-color: #E53935; }
 
-    .links a {
-      color: #e0f2fe;
-      text-decoration: none;
-      margin: 0 6px;
-      font-size: 14px;
-    }
+        {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    .resume-btn {
-      position: absolute;
-      top: 25px;
-      right: 25px;
-      background: #0f172a;
-      color: #38bdf8;
-      padding: 10px 18px;
-      border-radius: 20px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    }
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            background: #0f172a;               /* dark navy */
+            color: #e5e7eb;                     /* light gray */
+            line-height: 1.6;
+        }
 
-    .container {
-      padding: 30px;
-    }
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
 
-    .card-row {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+        a:hover {
+            text-decoration: underline;
+        }
 
-    .card {
-      background: #0f172a;
-      padding: 20px;
-      border-radius: 15px;
-      flex: 1;
-      min-width: 280px;
-    }
+        
 
-    h2 {
-      color: #38bdf8;
-      margin-top: 0;
-    }
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 16px 40px;
+        }
 
-    ul {
-      padding-left: 20px;
-    }
+        header {
+            background: linear-gradient(135deg, #1d4ed8, #0ea5e9);
+            border-radius: 18px;
+            padding: 24px 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 15px 30px rgba(15, 23, 42, 0.6);
+            margin-top: 16px;
+            margin-bottom: 26px;
+        }
 
-    ul li {
-      margin-bottom: 6px;
-      font-size: 14px;
-    }
+        header h1 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
 
-    .project-card {
-      background: #0f172a;
-      padding: 20px;
-      border-radius: 15px;
-      margin-top: 20px;
-    }
+        header p.subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
 
-    .tech {
-      color: #a5f3fc;
-      font-size: 14px;
-      margin-top: 10px;
-    }
+        header .tags {
+            font-size: 13px;
+            opacity: 0.95;
+        }
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      font-size: 13px;
-      color: #94a3b8;
-      margin-top: 30px;
-    }
+        .contact-line {
+            font-size: 13px;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
 
-    @media (max-width: 768px) {
-      .resume-btn {
-        position: static;
-        display: inline-block;
-        margin-top: 15px;
-      }
-    }
-  </style>
+        
+
+        .section {
+            background: #020617;
+            border-radius: 18px;
+            padding: 18px 16px 16px;
+            margin-bottom: 18px;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.7);
+            border: 1px solid #1e293b;
+        }
+
+        .section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            border-left: 4px solid #38bdf8;
+            padding-left: 8px;
+        }
+
+        .section h3 {
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+
+        .section p,
+        .section li {
+            font-size: 13px;
+            color: #e5e7eb;
+        }
+
+        ul {
+            padding-left: 18px;
+            margin-top: 4px;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: #1d4ed8;
+            font-size: 12px;
+            margin: 2px 4px 4px 0;
+        }
+
+        .pill.light {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+        }
+
+        
+
+        @media (min-width: 720px) {
+            header h1 {
+                font-size: 36px;
+            }
+
+            .section-grid {
+                display: grid;
+                grid-template-columns: 1.2fr 1fr;
+                gap: 16px;
+            }
+        }
+
+        footer {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 16px;
+            color: #9ca3af;
+        }
+        .resume-top-btn {
+  position: absolute;
+  top: 120px;  /* adjust if needed */
+  right: 50px;
+  z-index: 1000;
+}
+
+.resume-btn {
+  background: #0080ff;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+  background: #005fcc;
+  transform: scale(1.08);
+}
+
+       
+
+    </style>
 </head>
 
 <body>
+<div class="page">
 
-<header>
-  <h1>Chinmay Nitin Sardesai</h1>
-  <p class="subtitle">DevOps & Cloud Enthusiast • CSE Graduate</p>
 
-  <p class="skills">
-    DevOps Trainee at SkillEcted Pvt. Ltd., Pune •
-    Linux • Git • GitHub • AWS (Learning) • CI/CD Basics
-  </p>
+  <header>
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;">
+        <div>
+            <h1>Chinmay Nitin Sardesai</h1>
+            <p class="subtitle">
+                DevOps & Cloud Enthusiast • CSE Graduate
+            </p>
+            <p class="tags">
+                DevOps Trainee at SkillEcted Pvt. Ltd., Pune • Linux • Git • GitHub • AWS (learning) • CI/CD Basics
+            </p>
+           <p class="contact-line">
+    📍 Sangli &nbsp;|&nbsp;
+    📧 <a href="mailto:chinmaysardesai1111@gmail.com">chinmaysardesai1111@gmail.com</a>
+    &nbsp;|&nbsp; 📞 <a href="tel:8080207279">8080207279</a>
+</p>
 
-  <p class="contact">
-    📍 Sangli |
-    📧 chinmaysardesai11@gmail.com |
-    📞 8080207279
-  </p>
-
-  <div class="links">
-    <a href="#">LinkedIn</a> |
-    <a href="https://github.com/chinmay5192" target="_blank">GitHub</a>
-  </div>
-
-  <a class="resume-btn" href="Chinmay-Sardesai-Resume.pdf" download>
-    ⬇ Download Resume
+            <p class="contact-line">
+                🔗
+                <a href="https://www.linkedin.com/in/chinmay-sardesai-a85935331" target="_blank">LinkedIn</a>
+                &nbsp;|&nbsp;
+                <a href="https://github.com/Chinmay5192" target="_blank">GitHub</a>
+                &nbsp;|&nbsp;
+                <a href="https://chinmay5192.github.io/portfolio-site" target="_blank">Portfolio</a>
+            </p>
+        </div>
+        <div style="text-align:right; margin-top: -40px; margin-right: 20px;">
+  <a href="Chinmay-Sardesai-Resume.pdf" download>
+    <button class="resume-btn">↓ Download Resume</button>
   </a>
-</header>
-
-<div class="container">
-
-  <div class="card-row">
-    <div class="card">
-      <h2>About Me</h2>
-      <p>
-        I am a Computer Science & Engineering graduate with hands-on experience
-        in Linux, Git and GitHub. I enjoy learning how applications are deployed
-        and managed using cloud technologies.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>DevOps Training</h2>
-      <ul>
-        <li>Linux basics, users & permissions</li>
-        <li>Git & GitHub workflow</li>
-        <li>CI/CD basics</li>
-        <li>AWS EC2 hands-on deployment</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="project-card">
-    <h2>Project</h2>
-    <h3>Portfolio Website Deployment on AWS EC2</h3>
-
-    <ul>
-      <li>Launched Linux EC2 instance on AWS</li>
-      <li>Installed and configured Apache (httpd)</li>
-      <li>Deployed portfolio website using Git & GitHub</li>
-      <li>Configured Security Groups for HTTP & SSH</li>
-      <li>Hosted website using EC2 Public IP</li>
-    </ul>
-
-    <p class="tech">
-      <b>Technologies:</b> Linux | Git | GitHub | Apache | AWS EC2
-    </p>
-  </div>
-
 </div>
+        
+  
 
-<footer>
-  © 2025 Chinmay Sardesai | DevOps & Cloud Portfolio
-</footer>
+    <section class="section section-grid">
+        <div>
+            <h2>About Me</h2>
+            <p>
+                I am a Computer Science & Engineering graduate with hands-on knowledge of Linux, Git and GitHub.
+                I enjoy learning how applications are deployed, monitored and automated using cloud technologies.
+                I am interested in roles like <b>DevOps Engineer</b>, <b>Cloud Engineer</b> and
+                <b>Linux Administrator</b>.
+            </p>
+        </div>
+      
 
+        <div>
+            <h2>Current DevOps Training</h2>
+            <p>
+                I am currently pursuing a <b>DevOps training program at SkillEcted Pvt. Ltd., Pune</b>.
+                I have completed <b>2 months</b> of hands-on learning including:
+            </p>
+            <ul>
+                <li>Linux basics, users, permissions and shell</li>
+                <li>Git & GitHub workflow (branches, commits, pull / push)</li>
+                <li>Introduction to CI/CD pipelines</li>
+                <li>AWS Cloud basics and deployment concepts</li>
+            </ul>
+        </div>
+    </section>
+
+    
+    <section class="section">
+        <h2>Skills</h2>
+
+        <h3>Cloud & DevOps</h3>
+        <p>
+            <span class="pill">Linux (CLI, file system, permissions)</span>
+            <span class="pill">Git & GitHub</span>
+            <span class="pill">AWS (S3 basics)</span>
+            <span class="pill">Basic CI/CD concepts</span>
+        </p>
+
+        <h3 style="margin-top:10px;">Programming & Web</h3>
+        <p>
+            <span class="pill light">Python</span>
+            <span class="pill light">HTML</span>
+            <span class="pill light">CSS</span>
+        </p>
+
+        <h3 style="margin-top:10px;">Tools & Database</h3>
+        <p>
+            <span class="pill light">VS Code</span>
+            <span class="pill light">Git CLI</span>
+            <span class="pill light">MySQL</span>
+        </p>
+    </section>
+
+    
+    <section class="section">
+        <h2>Projects</h2>
+
+        <h3>Portfolio Website using Linux, Git, GitHub & GitHub Pages (AWS S3 Upcoming)</h3>
+        <ul>
+            <li>Developed a static portfolio website using HTML in a Linux environment.</li>
+            <li>Managed source code through Git and GitHub with proper commit history.</li>
+            <li>Deployed the website using GitHub Pages for public hosting.</li>
+            <li>Next step: migrate hosting to AWS S3 static website hosting.</li>
+            <li>Built and managed using CLI commands, improving confidence with Linux & Git.</li>
+        </ul>
+       
+    </section>
+
+<section class="section">
+    <h2>Certificates & Achievements</h2>
+
+    <p><b>Internship – Python Developer</b><br>
+    Company: WOLFOX Services Pvt. Ltd., Kolhapur<br>
+    Duration: 15th Dec 2023 – 31st Jan 2024<br>
+    Successfully completed internship as an Intern Python Developer at WOLFOX demonstrating work ethic, leadership & team player skills.</p>
+
+    <p><b>Quantum 2k23 – Mock Placement (National Level Technical Symposium)</b><br>
+    Participated and performed in Mock Placement event at D.Y. Patil Technical Campus, Talsande.</p>
+
+    <p><b>Quantum 2k24 – Mock Placement (National Level Technical Symposium)</b><br>
+    Awarded certificate for performance in Mock Placement event at D.Y. Patil Technical Campus, Talsande.</p>
+
+    <br>
+
+    <div style="text-align:center;">
+        <a href="cert-quantum-2k23.jpg" target="_blank">
+            <button class="cert-btn blue">View Quantum 2k23 Certificate</button>
+        </a>
+
+        <a href="cert-wolfox-internship.jpg" target="_blank">
+            <button class="cert-btn green">View Internship Certificate</button>
+        </a>
+
+        <a href="cert-quantum-2k24.jpg" target="_blank">
+            <button class="cert-btn red">View Quantum 2k24 Certificate</button>
+        </a>
+    </div>
+</section>
+
+    
+    <section class="section">
+        <h2>Education</h2>
+        <p><b>BE – Computer Science & Engineering</b></p>
+        <p>Shivaji University, Kolhapur (2021 – 2025)</p>
+    </section>
+
+    
+    <section class="section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:chinmaysardesai1111@gmail.com">chinmaysardesai1111@gmail.com</a></p>
+        <p>Phone: 8080207279</p>
+        <p>Location: Sangli / Pune (open to relocation)</p>
+    </section>
+
+    <footer>
+        © 2025 Chinmay Nitin Sardesai – Portfolio & DevOps Learning Journey
+    </footer>
+</div>
 </body>
 </html>
