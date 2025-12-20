@@ -27,23 +27,37 @@ body{
   padding:20px;
 }
 
-/* HEADER */
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+.fade-up{
+  animation:fadeUp 0.8s ease forwards;
+}
+
+.delay-1{animation-delay:0.2s;}
+.delay-2{animation-delay:0.4s;}
+.delay-3{animation-delay:0.6s;}
+
+/* ---------- HEADER ---------- */
 header{
   background:linear-gradient(135deg,#0f172a,#1d4ed8,#0ea5e9);
   padding:40px 25px;
-  border-radius:20px;
+  border-radius:22px;
   text-align:center;
-  box-shadow:0 15px 35px rgba(0,0,0,0.4);
+  box-shadow:0 18px 40px rgba(0,0,0,0.45);
 }
 
 header h1{
   font-size:34px;
-  margin-bottom:6px;
 }
 
 header .title{
   font-size:16px;
   font-weight:600;
+  margin-top:6px;
   opacity:0.95;
 }
 
@@ -74,16 +88,23 @@ header .contact{
 .resume-btn:hover{
   background:#38bdf8;
   color:#ffffff;
-  transform:scale(1.05);
+  transform:scale(1.08);
 }
 
-/* SECTIONS */
+/* ---------- SECTIONS ---------- */
 .section{
   margin-top:25px;
   padding:20px;
   border-radius:18px;
   border:1px solid #1e293b;
-  transition:0.3s ease;
+  opacity:0;
+  transform:translateY(20px);
+  transition:0.6s ease;
+}
+
+.section.show{
+  opacity:1;
+  transform:translateY(0);
 }
 
 .section:hover{
@@ -105,7 +126,7 @@ li{
   margin-bottom:6px;
 }
 
-/* CERTIFICATE BUTTONS */
+/* ---------- CERTIFICATE BUTTONS ---------- */
 .cert-buttons{
   display:flex;
   gap:14px;
@@ -124,15 +145,15 @@ li{
 }
 
 .cert-btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 6px 15px rgba(0,0,0,0.4);
+  transform:translateY(-3px) scale(1.03);
+  box-shadow:0 8px 20px rgba(0,0,0,0.45);
 }
 
 .green{background:#22c55e;}
 .blue{background:#38bdf8;}
 .red{background:#ef4444;}
 
-/* FOOTER */
+/* ---------- FOOTER ---------- */
 footer{
   text-align:center;
   margin-top:25px;
@@ -145,19 +166,19 @@ footer{
 <body>
 <div class="container">
 
-<header>
+<header class="fade-up">
   <h1>Chinmay Nitin Sardesai</h1>
-  <p class="title">DevOps & Cloud Enthusiast | CSE Graduate</p>
+  <p class="title delay-1 fade-up">DevOps & Cloud Enthusiast | CSE Graduate</p>
 
-  <p class="skills">
+  <p class="skills delay-2 fade-up">
     Linux • Git • GitHub • AWS (EC2, S3) • CI/CD Basics
   </p>
 
-  <p class="contact">
+  <p class="contact delay-3 fade-up">
     📍 Sangli | 📧 chinmaysardesai1111@gmail.com | 📞 8080207279
   </p>
 
-  <a href="Chinmay-Sardesai-Resume.pdf" class="resume-btn" download>
+  <a href="Chinmay-Sardesai-Resume.pdf" class="resume-btn delay-3 fade-up" download>
     ↓ Download Resume
   </a>
 </header>
@@ -186,24 +207,21 @@ Actively seeking entry-level DevOps or Cloud Engineer roles.
 
 <h3>Portfolio Website Deployment on AWS EC2</h3>
 <ul>
-  <li>Launched and managed an Amazon Linux EC2 instance.</li>
-  <li>Connected securely using SSH key-based authentication.</li>
-  <li>Installed and configured Apache (httpd) web server.</li>
-  <li>Deployed static portfolio website from GitHub.</li>
-  <li>Configured Security Groups for HTTP (80) and SSH (22).</li>
+  <li>Launched and managed an Amazon Linux EC2 instance</li>
+  <li>Connected using SSH key-based authentication</li>
+  <li>Installed and configured Apache web server</li>
+  <li>Deployed static portfolio website from GitHub</li>
+  <li>Configured Security Groups for HTTP & SSH</li>
 </ul>
-<p><b>Technologies:</b> Linux, Git, GitHub, Apache, AWS EC2</p>
 
 <br>
 
 <h3>Portfolio Website Hosting on AWS S3</h3>
 <ul>
-  <li>Hosted static portfolio website using AWS S3.</li>
-  <li>Configured bucket policy for public access.</li>
-  <li>Enabled S3 static website hosting.</li>
+  <li>Hosted static portfolio website using AWS S3</li>
+  <li>Configured public access and bucket policy</li>
+  <li>Enabled static website hosting</li>
 </ul>
-<p><b>Technologies:</b> AWS S3, HTML, CSS</p>
-
 </section>
 
 <section class="section">
@@ -247,5 +265,21 @@ Actively seeking entry-level DevOps or Cloud Engineer roles.
 </footer>
 
 </div>
+
+<!-- SCROLL REVEAL SCRIPT -->
+<script>
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+  const trigger = window.innerHeight * 0.85;
+  sections.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if(top < trigger){
+      section.classList.add('show');
+    }
+  });
+});
+</script>
+
 </body>
 </html>
