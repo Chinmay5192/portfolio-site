@@ -8,210 +8,141 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-body{
-  font-family:Poppins,Arial,sans-serif;
-  color:#e5e7eb;
-  background: linear-gradient(-45deg,#020617,#0f172a,#020617,#020617);
-  background-size:400% 400%;
-  animation:bgMove 15s ease infinite;
-}
-
-@keyframes bgMove{
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-
-.container{
-  max-width:950px;
-  margin:auto;
-  padding:25px;
-}
-
-
-header{
-  background:linear-gradient(135deg,#0f172a,#1d4ed8,#0ea5e9);
-  padding:45px 25px;
-  border-radius:24px;
-  text-align:center;
-  box-shadow:0 25px 60px rgba(0,0,0,0.55);
-  position:relative;
-  overflow:hidden;
-}
-
-header::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:radial-gradient(circle at top,#38bdf855,transparent 60%);
-}
-
-header h1{
-  font-size:36px;
-  position:relative;
-  z-index:1;
-}
-
-.typing{
-  margin-top:6px;
-  font-weight:600;
-  font-size:16px;
-  white-space:nowrap;
-  overflow:hidden;
-  border-right:2px solid #fff;
-  width:0;
-  animation:typing 3s steps(40,end) forwards, blink 0.8s infinite;
-}
-
-@keyframes typing{
-  to{width:100%}
-}
-@keyframes blink{
-  50%{border-color:transparent}
-}
-
-header .skills,
-header .contact{
-  margin-top:10px;
-  font-size:14px;
-  opacity:0.95;
-  position:relative;
-  z-index:1;
-}
-
-.resume-btn{
-  display:inline-block;
-  margin-top:22px;
-  padding:13px 34px;
-  background:#ffffff;
-  color:#0f172a;
-  border-radius:40px;
-  font-weight:600;
-  text-decoration:none;
-  border:2px solid #38bdf8;
-  transition:0.35s ease;
-  position:relative;
-  z-index:1;
-}
-
-.resume-btn:hover{
-  background:#38bdf8;
-  color:#ffffff;
-  box-shadow:0 0 25px #38bdf8aa;
-  transform:scale(1.12);
-}
-
-
-.section{
+<style>
+.linkedin-layout{
+  display:flex;
+  gap:25px;
   margin-top:30px;
-  padding:22px;
-  border-radius:20px;
-  background:rgba(2,6,23,0.7);
+  align-items:flex-start;
+}
+
+/* LEFT PROFILE */
+.profile-card{
+  width:280px;
+  background:#020617;
   border:1px solid #1e293b;
-  backdrop-filter:blur(6px);
-  opacity:0;
-  transform:translateY(30px);
-  transition:0.7s ease;
+  border-radius:18px;
+  padding:20px;
+  text-align:center;
+  transition:0.3s;
 }
 
-.section.show{
-  opacity:1;
-  transform:translateY(0);
+.profile-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
-.section:hover{
-  border-color:#38bdf8;
-  box-shadow:0 0 25px rgba(56,189,248,0.15);
+.profile-card img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #38bdf8;
+  margin-bottom:12px;
 }
 
-.section h2{
+.profile-card h3{
+  margin:10px 0 5px;
+}
+
+.profile-card .role{
+  color:#38bdf8;
+  font-weight:600;
+  font-size:14px;
+}
+
+.profile-card .location{
+  font-size:13px;
+  color:#9ca3af;
+  margin-top:6px;
+}
+
+/* RIGHT CONTENT */
+.info-card{
+  flex:1;
+  background:#020617;
+  border:1px solid #1e293b;
+  border-radius:18px;
+  padding:22px;
+}
+
+.info-card h2{
   border-left:4px solid #38bdf8;
   padding-left:10px;
   margin-bottom:10px;
+  margin-top:20px;
 }
 
-ul{padding-left:20px}
-li{margin-bottom:6px}
-
-
-.cert-buttons{
-  display:flex;
-  gap:16px;
-  flex-wrap:wrap;
-  margin-top:12px;
+.info-card h2:first-child{
+  margin-top:0;
 }
 
-.cert-btn{
-  padding:11px 22px;
-  border-radius:10px;
-  color:#fff;
-  font-weight:600;
-  text-decoration:none;
-  transition:0.35s ease;
+.info-card ul{
+  padding-left:18px;
 }
 
-.cert-btn:hover{
-  transform:translateY(-4px) scale(1.06);
-  box-shadow:0 10px 25px rgba(0,0,0,0.45);
+.info-card li{
+  margin-bottom:6px;
 }
 
-.green{background:#22c55e}
-.blue{background:#38bdf8}
-.red{background:#ef4444}
-
-
-footer{
-  margin-top:30px;
-  text-align:center;
-  font-size:12px;
-  color:#9ca3af;
+/* RESPONSIVE */
+@media(max-width:900px){
+  .linkedin-layout{
+    flex-direction:column;
+  }
+  .profile-card{
+    width:100%;
+  }
 }
 </style>
+
 </head>
 
-<body>
-<div class="container">
+<section class="linkedin-layout">
 
-<header>
-  <h1>Chinmay Nitin Sardesai</h1>
-  <div class="typing">DevOps & Cloud Enthusiast | CSE Graduate</div>
+  <!-- LEFT PROFILE -->
+  <div class="profile-card">
+    <img src="images/profile.jpg" alt="Chinmay Sardesai">
+    <h3>Chinmay Nitin Sardesai</h3>
+    <p class="role">DevOps & Cloud Enthusiast</p>
+    <p class="location">📍 Sangli, Maharashtra</p>
+  </div>
 
-  <p class="skills">
-    Linux • Git • GitHub • AWS (EC2, S3) • CI/CD Basics
-  </p>
+  <!-- RIGHT CONTENT -->
+  <div class="info-card">
 
-  <p class="contact">
-    📍 Sangli | 📧 chinmaysardesai1111@gmail.com | 📞 8080207279
-  </p>
+    <h2>About Me</h2>
+    <p>
+      Computer Science graduate with hands-on experience in Linux, Git, GitHub and AWS.
+      Passionate about cloud infrastructure, deployment and automation.
+      Actively seeking fresher roles in DevOps / Cloud Engineering.
+    </p>
 
-  <a href="Chinmay-Sardesai-Resume.pdf" class="resume-btn" download>
-    ↓ Download Resume
-  </a>
-</header>
+    <h2>Current DevOps Training</h2>
+    <ul>
+      <li>Linux basics, users, permissions & shell commands</li>
+      <li>Git & GitHub workflow (commit, push, branches)</li>
+      <li>AWS EC2 instance launch & Apache deployment</li>
+      <li>AWS S3 static website hosting</li>
+      <li>CI/CD fundamentals</li>
+    </ul>
 
-<section class="section">
-<h2>About Me</h2>
-<p>
-Computer Science & Engineering graduate with hands-on experience in Linux, Git, GitHub and AWS.
-Focused on building a strong DevOps foundation with real-world cloud deployments.
-</p>
+    <h2>Projects</h2>
+    <ul>
+      <li>
+        <b>Portfolio Website on AWS EC2</b> –  
+        Deployed a live website using Linux EC2, Apache, Security Groups and Public IP.
+      </li>
+      <li>
+        <b>Static Website Hosting on AWS S3</b> –  
+        Hosted a static portfolio using S3 with public access configuration.
+      </li>
+    </ul>
+
+  </div>
+
 </section>
 
-<section class="section">
-<h2>Current DevOps Training</h2>
-<ul>
-  <li>Linux fundamentals and server administration</li>
-  <li>Git & GitHub version control</li>
-  <li>CI/CD concepts</li>
-  <li>AWS EC2 & S3 static website hosting</li>
-</ul>
-</section>
 
 <section class="section">
 <h2>Projects</h2>
