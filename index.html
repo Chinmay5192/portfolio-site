@@ -1,179 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Chinmay | DevOps & Cloud Enthusiast</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
+<title>Chinmay Sardesai | DevOps & Cloud Enthusiast</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
-  font-family:Poppins,Arial,sans-serif;
+  font-family:'Poppins',sans-serif;
   background:#020617;
   color:#e5e7eb;
 }
 
-.page{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
-}
-
-/* HEADER */
+/* ---------- HEADER ---------- */
 header{
+  max-width:1100px;
+  margin:25px auto 20px;
   background:linear-gradient(135deg,#1d4ed8,#0ea5e9);
-  border-radius:20px;
-  padding:30px;
-  color:#fff;
+  padding:28px;
+  border-radius:18px;
   text-align:center;
-  margin-bottom:30px;
+  color:#fff;
 }
 
-header h1{font-size:34px}
-header p{margin-top:6px}
+header h1{
+  font-size:30px;
+  font-weight:600;
+}
+
+header p{
+  margin-top:6px;
+  font-size:14px;
+  opacity:0.95;
+}
+
+.contact{
+  margin-top:10px;
+  font-size:13px;
+}
 
 .resume-btn{
-  background:#ffffff;
+  margin-top:14px;
+  padding:10px 26px;
+  background:#fff;
   color:#0f172a;
-  padding:12px 30px;
-  border-radius:30px;
-  border:2px solid #0ea5e9;
+  border:none;
+  border-radius:25px;
   font-weight:600;
   cursor:pointer;
-  margin-top:14px;
   transition:0.3s;
 }
-
 .resume-btn:hover{
   background:#0ea5e9;
   color:#fff;
   transform:scale(1.05);
 }
 
-/* LINKEDIN LAYOUT */
-.linkedin-layout{
-  display:flex;
-  gap:25px;
-  align-items:flex-start;
+/* ---------- LAYOUT ---------- */
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:280px 1fr;
+  gap:20px;
+  padding:10px;
 }
 
-/* LEFT PROFILE */
+/* ---------- LEFT PROFILE ---------- */
 .profile-card{
-  width:300px;
-  background:#020617;
+  background:#02091f;
   border:1px solid #1e293b;
-  border-radius:18px;
+  border-radius:16px;
   padding:22px;
   text-align:center;
-  transition:0.3s;
-}
-
-.profile-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 12px 25px rgba(0,0,0,0.4);
 }
 
 .profile-card img{
-  width:120px;
-  height:120px;
+  width:110px;
+  height:110px;
   border-radius:50%;
   object-fit:cover;
-  border:3px solid #38bdf8;
-  margin-bottom:12px;
+  margin-bottom:14px;
 }
 
-.profile-card h3{margin:10px 0 5px}
-.profile-card .role{
-  color:#38bdf8;
-  font-weight:600;
-  font-size:14px;
+.profile-card h3{
+  font-size:18px;
 }
-.profile-card .location{
+
+.profile-card p{
   font-size:13px;
-  color:#9ca3af;
+  opacity:0.85;
   margin-top:6px;
 }
 
-/* RIGHT CONTENT */
+/* ---------- RIGHT CONTENT ---------- */
 .info-card{
-  flex:1;
-  background:#020617;
+  background:#02091f;
   border:1px solid #1e293b;
-  border-radius:18px;
-  padding:25px;
+  border-radius:16px;
+  padding:22px;
+  transition:0.3s;
+}
+.info-card:hover{
+  box-shadow:0 12px 28px rgba(0,0,0,0.35);
 }
 
 .info-card h2{
+  font-size:18px;
   border-left:4px solid #38bdf8;
   padding-left:10px;
-  margin-bottom:10px;
-  margin-top:22px;
+  margin:18px 0 10px;
 }
 
-.info-card h2:first-child{margin-top:0}
-.info-card ul{padding-left:18px}
-.info-card li{margin-bottom:6px}
+.info-card ul{
+  padding-left:18px;
+}
 
-/* SECTION STYLE */
-.section{
+.info-card li{
+  margin-bottom:6px;
+  font-size:14px;
+}
+
+/* ---------- PROJECT BOX ---------- */
+.project{
   background:#020617;
-  border-radius:18px;
-  padding:20px;
-  margin-top:25px;
   border:1px solid #1e293b;
+  padding:14px;
+  border-radius:12px;
+  margin-bottom:12px;
 }
 
-/* RESPONSIVE */
-@media(max-width:900px){
-  .linkedin-layout{flex-direction:column}
-  .profile-card{width:100%}
-}
-
+/* ---------- FOOTER ---------- */
 footer{
   text-align:center;
   font-size:12px;
-  color:#9ca3af;
-  margin-top:25px;
+  opacity:0.6;
+  margin:30px 0 10px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:900px){
+  .container{
+    grid-template-columns:1fr;
+  }
 }
 </style>
 </head>
 
 <body>
-<div class="page">
 
 <header>
   <h1>Chinmay Nitin Sardesai</h1>
   <p>DevOps & Cloud Enthusiast • CSE Graduate</p>
   <p>Linux • Git • GitHub • AWS • CI/CD Basics</p>
-  <p>📍 Sangli | 📧 chinmaysardesai1111@gmail.com | 📞 8080207279</p>
+
+  <div class="contact">
+    📍 Sangli | 📧 chinmaysardesai1111@gmail.com | 📞 8080207279
+  </div>
 
   <a href="Chinmay-Sardesai-Resume.pdf" download>
     <button class="resume-btn">↓ Download Resume</button>
   </a>
 </header>
 
-<!-- LINKEDIN STYLE MAIN SECTION -->
-<section class="linkedin-layout">
+<div class="container">
 
-  <!-- LEFT PROFILE -->
+  <!-- LEFT -->
   <div class="profile-card">
-    <img src="images/profile.jpg" alt="Chinmay Sardesai">
-    <h3>Chinmay Nitin Sardesai</h3>
-    <p class="role">DevOps & Cloud Enthusiast</p>
-    <p class="location">📍 Sangli, Maharashtra</p>
+    <img src="profile.jpg" alt="Chinmay Sardesai">
+    <h3>Chinmay Sardesai</h3>
+    <p>DevOps & Cloud Enthusiast</p>
+    <p>📍 Sangli, Maharashtra</p>
   </div>
 
-  <!-- RIGHT INFO -->
+  <!-- RIGHT -->
   <div class="info-card">
 
     <h2>About Me</h2>
     <p>
       Computer Science graduate with hands-on experience in Linux, Git, GitHub and AWS.
       Passionate about deploying and managing cloud-based applications.
-      Seeking fresher opportunities in DevOps / Cloud Engineering roles.
+      Seeking fresher opportunities in DevOps / Cloud Engineer roles.
     </p>
 
     <h2>Current DevOps Training</h2>
@@ -186,30 +201,36 @@ footer{
     </ul>
 
     <h2>Projects</h2>
-    <ul>
-      <li>
-        <b>Portfolio Website on AWS EC2</b> –  
-        Deployed a live website using Linux EC2, Apache, Security Groups and Public IP.
-      </li>
-      <li>
-        <b>Static Website Hosting on AWS S3</b> –  
-        Hosted a static portfolio using AWS S3 with public access configuration.
-      </li>
-    </ul>
+
+    <div class="project">
+      <b>Portfolio Website Deployment on AWS EC2</b>
+      <ul>
+        <li>Launched Linux EC2 and configured Apache web server</li>
+        <li>Deployed portfolio website using public IP</li>
+        <li>Configured security groups for HTTP & SSH</li>
+      </ul>
+      <small>Tech: Linux, AWS EC2, Apache</small>
+    </div>
+
+    <div class="project">
+      <b>Static Website Hosting on AWS S3</b>
+      <ul>
+        <li>Hosted static portfolio using S3 static website hosting</li>
+        <li>Configured public access & bucket policy</li>
+      </ul>
+      <small>Tech: AWS S3, HTML, CSS</small>
+    </div>
+
+    <h2>Education</h2>
+    <p>B.Tech – Computer Science & Engineering</p>
+    <p>Shivaji University, Kolhapur (2021–2025)</p>
 
   </div>
-</section>
-
-<section class="section">
-  <h2>Education</h2>
-  <p><b>BTech – Computer Science & Engineering</b></p>
-  <p>Shivaji University, Kolhapur (2021–2025)</p>
-</section>
+</div>
 
 <footer>
 © 2025 Chinmay Sardesai | DevOps Portfolio
 </footer>
 
-</div>
 </body>
 </html>
