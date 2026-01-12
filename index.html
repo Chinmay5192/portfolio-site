@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Chinmay Sardesai | Cloud & DevOps Portfolio</title>
+<title>Chinmay Sardesai | DevOps & Cloud Engineer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -16,8 +16,9 @@
 
 body{
   font-family:'Inter',sans-serif;
-  background:#0b1220;
+  background:#020617;
   color:#e5e7eb;
+  line-height:1.6;
 }
 
 /* ---------- NAVBAR ---------- */
@@ -25,22 +26,244 @@ nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:18px 50px;
+  padding:18px 40px;
   background:#020617;
+  border-bottom:1px solid #1e293b;
   position:sticky;
   top:0;
   z-index:100;
-  border-bottom:1px solid #1e293b;
 }
 
-nav h2{
-  font-size:20px;
+nav .logo{
+  font-size:22px;
   font-weight:700;
   color:#38bdf8;
 }
 
 nav a{
-  margin-left:25px;
-  text-decoration:none;
   color:#cbd5f5;
+  text-decoration:none;
+  margin-left:25px;
   font-size:14px;
+}
+
+nav a:hover{
+  color:#38bdf8;
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  padding:90px 40px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.hero h1{
+  font-size:42px;
+  font-weight:700;
+}
+
+.hero h1 span{
+  color:#38bdf8;
+}
+
+.hero h3{
+  margin-top:10px;
+  font-size:18px;
+  font-weight:500;
+  color:#cbd5f5;
+}
+
+.hero p{
+  margin-top:20px;
+  max-width:600px;
+  color:#94a3b8;
+}
+
+.hero .buttons{
+  margin-top:30px;
+}
+
+.hero .btn{
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:8px;
+  font-weight:600;
+  text-decoration:none;
+  margin-right:15px;
+  transition:0.3s;
+}
+
+.btn-primary{
+  background:#38bdf8;
+  color:#020617;
+}
+
+.btn-primary:hover{
+  background:#0ea5e9;
+}
+
+.btn-outline{
+  border:2px solid #38bdf8;
+  color:#38bdf8;
+}
+
+.btn-outline:hover{
+  background:#38bdf8;
+  color:#020617;
+}
+
+/* ---------- SECTIONS ---------- */
+section{
+  max-width:1100px;
+  margin:60px auto;
+  padding:0 40px;
+}
+
+section h2{
+  font-size:28px;
+  margin-bottom:20px;
+  border-left:4px solid #38bdf8;
+  padding-left:12px;
+}
+
+/* ---------- CARDS ---------- */
+.card{
+  background:#020617;
+  border:1px solid #1e293b;
+  border-radius:14px;
+  padding:25px;
+  margin-bottom:25px;
+}
+
+.card:hover{
+  border-color:#38bdf8;
+}
+
+/* ---------- LIST ---------- */
+ul{
+  padding-left:20px;
+}
+
+li{
+  margin-bottom:8px;
+  color:#cbd5f5;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+  text-align:center;
+  padding:30px;
+  border-top:1px solid #1e293b;
+  color:#94a3b8;
+  font-size:14px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:768px){
+  .hero h1{font-size:32px}
+  nav{padding:15px 20px}
+  section{padding:0 20px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Chinmay.</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Hi, I'm <span>Chinmay Sardesai</span></h1>
+  <h3>DevOps & Cloud Engineer | Fresher</h3>
+
+  <p>
+    Computer Science graduate passionate about cloud infrastructure,
+    automation and modern DevOps practices. Actively seeking
+    entry-level DevOps / Cloud Engineer opportunities.
+  </p>
+
+  <div class="buttons">
+    <a href="Chinmay-Sardesai-Resume.pdf" class="btn btn-primary" download>
+      Download Resume
+    </a>
+    <a href="#projects" class="btn btn-outline">
+      View Projects
+    </a>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      I am a Computer Science & Engineering graduate with hands-on experience
+      in Linux, Git, GitHub and AWS. I enjoy working on real-world cloud
+      deployments and learning how scalable infrastructure is built and managed.
+    </p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="card">
+    <ul>
+      <li>Linux system administration</li>
+      <li>Git & GitHub version control</li>
+      <li>AWS EC2, S3, IAM basics</li>
+      <li>CI/CD fundamentals</li>
+      <li>Infrastructure basics (VPC, Security Groups)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>AWS EC2 Portfolio Deployment</h3>
+    <ul>
+      <li>Launched and managed EC2 instance</li>
+      <li>Configured Apache web server</li>
+      <li>Deployed portfolio using public IP</li>
+      <li>Configured security groups (HTTP & SSH)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>AWS S3 Static Website Hosting</h3>
+    <ul>
+      <li>Hosted static website using S3</li>
+      <li>Configured bucket policy and public access</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>📍 Sangli, Maharashtra</p>
+    <p>📧 chinmaysardesai1111@gmail.com</p>
+    <p>📞 8080207279</p>
+  </div>
+</section>
+
+<footer>
+© 2025 Chinmay Sardesai • DevOps & Cloud Portfolio
+</footer>
+
+</body>
+</html>
