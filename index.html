@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Chinmay Portfolio | DevOps & Cloud Engineer</title>
+<title>Chinmay Sardesai | DevOps & Cloud Engineer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -12,16 +12,17 @@
 :root{
   --bg:#0a1020;
   --card:#121a33;
-  --accent:#4f9cf9;
-  --accent2:#2dd4bf;
+  --accent:#38bdf8;
+  --accent2:#22c55e;
   --text:#e5e7eb;
   --muted:#9ca3af;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{
   font-family:Poppins,sans-serif;
-  background:radial-gradient(circle at top,#0f172a,#020617 65%);
+  background:radial-gradient(circle at top,#0f172a,#020617 60%);
   color:var(--text);
+  scroll-behavior:smooth;
 }
 
 /* NAVBAR */
@@ -42,6 +43,7 @@ nav a{
   color:#cbd5f5;
   text-decoration:none;
   font-weight:500;
+  transition:.3s;
 }
 nav a:hover{color:var(--accent)}
 
@@ -52,30 +54,15 @@ nav a:hover{color:var(--accent)}
   grid-template-columns:1.4fr 1fr;
   gap:50px;
 }
-.hero h1{font-size:48px}
+.hero h1{font-size:48px;line-height:1.2}
 .hero span{color:var(--accent)}
 .hero p{
   margin-top:14px;
   color:var(--muted);
-  max-width:540px;
+  max-width:520px;
 }
-
-.hero-tags{
-  margin-top:18px;
-  display:flex;
-  gap:18px;
-  flex-wrap:wrap;
-}
-.hero-tags span{
-  background:#020617;
-  padding:8px 16px;
-  border-radius:20px;
-  font-size:14px;
-  border:1px solid #1e293b;
-}
-
 .btns{
-  margin-top:30px;
+  margin-top:28px;
   display:flex;
   gap:18px;
 }
@@ -84,10 +71,15 @@ nav a:hover{color:var(--accent)}
   border-radius:40px;
   font-weight:600;
   text-decoration:none;
+  transition:.3s;
 }
 .primary{
   background:var(--accent);
   color:#020617;
+}
+.primary:hover{
+  box-shadow:0 0 30px #38bdf8aa;
+  transform:translateY(-2px);
 }
 .outline{
   border:2px solid var(--accent);
@@ -103,8 +95,14 @@ nav a:hover{color:var(--accent)}
   background:linear-gradient(145deg,#0f172a,#111827);
   border-radius:24px;
   padding:34px;
+  box-shadow:0 30px 70px rgba(0,0,0,.6);
 }
-.hero-card p{margin-bottom:14px}
+.hero-card p{margin-bottom:14px;color:#dbeafe}
+.hero-card a{
+  color:var(--accent);
+  font-size:22px;
+}
+.hero-card a:hover{color:#fff}
 
 /* SECTIONS */
 section{padding:90px 60px}
@@ -119,6 +117,11 @@ section{padding:90px 60px}
   border-radius:22px;
   padding:30px;
   border:1px solid #1e293b;
+  transition:.35s;
+}
+.card:hover{
+  border-color:var(--accent);
+  box-shadow:0 0 35px rgba(56,189,248,.15);
 }
 
 /* ABOUT */
@@ -131,16 +134,26 @@ section{padding:90px 60px}
 /* SKILLS */
 .skills{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
   gap:22px;
 }
 .skill{
-  background:#020617;
-  padding:26px;
-  border-radius:18px;
+  background:linear-gradient(160deg,#0f172a,#020617);
+  padding:28px;
+  border-radius:20px;
   text-align:center;
+  transition:.35s;
 }
-.skill i{font-size:28px;color:var(--accent);margin-bottom:8px}
+.skill i{
+  font-size:30px;
+  color:var(--accent);
+  margin-bottom:10px;
+}
+.skill h4{font-weight:600}
+.skill:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(0,0,0,.6);
+}
 
 /* PROJECTS */
 .projects{
@@ -151,17 +164,13 @@ section{padding:90px 60px}
 .projects h3{color:var(--accent);margin-bottom:8px}
 
 /* EDUCATION */
-.edu{display:grid;gap:22px}
+.edu{display:grid;gap:24px}
 
 /* CONTACT */
 .contact{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:30px;
-}
-.contact p{
-  font-size:18px;
-  margin-bottom:18px;
 }
 input,textarea{
   width:100%;
@@ -171,6 +180,10 @@ input,textarea{
   background:#020617;
   color:#fff;
   margin-bottom:14px;
+}
+input:focus,textarea:focus{
+  outline:none;
+  border-color:var(--accent);
 }
 
 /* FOOTER */
@@ -195,7 +208,7 @@ footer{
 <body>
 
 <nav>
-  <h2>Chinmay Portfolio</h2>
+  <h2>Chinmay.</h2>
   <ul>
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
@@ -209,17 +222,7 @@ footer{
 <section class="hero" id="home">
   <div>
     <h1>Hi, I'm <span>Chinmay Sardesai</span></h1>
-    <p>
-      DevOps & Cloud Enthusiast with hands-on experience in Linux, AWS and
-      infrastructure automation. Passionate about real-world cloud deployments.
-    </p>
-
-    <div class="hero-tags">
-      <span><i class="fab fa-linkedin"></i> LinkedIn</span>
-      <span><i class="fab fa-aws"></i> AWS</span>
-      <span><i class="fas fa-cloud"></i> DevOps</span>
-    </div>
-
+    <p>DevOps & Cloud Enthusiast with hands-on experience in Linux, AWS and Infrastructure Automation.</p>
     <div class="btns">
       <a href="Chinmay-Sardesai-Resume.pdf" class="btn primary">Download Resume</a>
       <a href="#contact" class="btn outline">Contact Me</a>
@@ -229,7 +232,10 @@ footer{
   <div class="hero-card">
     <p>📍 Sangli, Maharashtra</p>
     <p>📧 chinmaysardesai1111@gmail.com</p>
-    <p>☁️ Cloud Engineer | DevOps</p>
+    <p>☁️ DevOps | Cloud Engineer</p>
+    <a href="https://github.com/chinmay5192"><i class="fab fa-github"></i></a>
+    &nbsp;&nbsp;
+    <a href="https://www.linkedin.com/in/chinmay-sardesai-a85935331"><i class="fab fa-linkedin"></i></a>
   </div>
 </section>
 
@@ -237,12 +243,10 @@ footer{
   <h2 class="title">About <span>Me</span></h2>
   <div class="about">
     <div class="card">
-      Computer Science graduate with strong Linux fundamentals, AWS services
-      knowledge and interest in DevOps automation.
+      Computer Science graduate with strong Linux fundamentals and practical AWS experience.
     </div>
     <div class="card">
-      Comfortable with hands-on labs, cloud deployments and learning
-      production-style environments.
+      Actively seeking fresher opportunities in DevOps and Cloud Engineering roles.
     </div>
   </div>
 </section>
@@ -252,11 +256,11 @@ footer{
   <div class="skills">
     <div class="skill"><i class="fab fa-linux"></i><h4>Linux</h4></div>
     <div class="skill"><i class="fab fa-aws"></i><h4>AWS</h4></div>
-    <div class="skill"><i class="fab fa-html5"></i><h4>HTML</h4></div>
-    <div class="skill"><i class="fab fa-css3-alt"></i><h4>CSS</h4></div>
-    <div class="skill"><i class="fas fa-terminal"></i><h4>Bash</h4></div>
     <div class="skill"><i class="fab fa-git-alt"></i><h4>Git</h4></div>
+    <div class="skill"><i class="fab fa-github"></i><h4>GitHub</h4></div>
     <div class="skill"><i class="fas fa-cubes"></i><h4>Docker</h4></div>
+    <div class="skill"><i class="fas fa-network-wired"></i><h4>Kubernetes</h4></div>
+    <div class="skill"><i class="fas fa-tools"></i><h4>Jenkins</h4></div>
     <div class="skill"><i class="fas fa-code-branch"></i><h4>Terraform</h4></div>
   </div>
 </section>
@@ -266,15 +270,18 @@ footer{
   <div class="projects">
     <div class="card">
       <h3>Portfolio Website on AWS EC2</h3>
-      Deployed Linux EC2, configured Apache and hosted portfolio.
+      Deployed Linux EC2 instance, configured Apache server, managed security groups and hosted portfolio via public IP.
+      <br><br><b>Tech:</b> AWS EC2, Linux, Apache, HTML, CSS
     </div>
     <div class="card">
-      <h3>Static Website Hosting on AWS S3</h3>
-      Hosted static site with public access and bucket policy.
+      <h3>AWS S3 Static Website Hosting</h3>
+      Hosted static portfolio on S3 with public access and bucket policy configuration.
+      <br><br><b>Tech:</b> AWS S3, HTML, CSS
     </div>
     <div class="card">
       <h3>Terraform EC2 Automation</h3>
-      Created EC2 using Terraform variables and IaC approach.
+      Created EC2 instance using Terraform variables and Infrastructure as Code approach.
+      <br><br><b>Tech:</b> Terraform, AWS EC2
     </div>
   </div>
 </section>
@@ -282,12 +289,10 @@ footer{
 <section id="education">
   <h2 class="title">Education</h2>
   <div class="edu">
-    <div class="card">10th – Gotkhindi Vidyalay, Gotkhindi</div>
-    <div class="card">12th – Gotkhindi Vidyalay Jr. College, Gotkhindi</div>
     <div class="card">
-      B.Tech – Computer Science & Engineering<br>
+      <h3>B.Tech – Computer Science & Engineering</h3>
       D. Y. Patil Technical Campus, Talsande<br>
-      Shivaji University (2021–2025)
+      Shivaji University, Kolhapur (2021–2025)
     </div>
   </div>
 </section>
@@ -296,9 +301,10 @@ footer{
   <h2 class="title">Get In <span>Touch</span></h2>
   <div class="contact">
     <div class="card">
-      <p><b>Email:</b> chinmaysardesai1111@gmail.com</p>
-      <p><b>Mobile:</b> 8080207279</p>
-      <p><b>LinkedIn:</b> chinmay-sardesai</p>
+      <p>📧 chinmaysardesai1111@gmail.com</p>
+      <p>📞 8080207279</p>
+      <p>🔗 LinkedIn: chinmay-sardesai</p>
+      <p>🌐 Portfolio: chinmay5192.github.io/portfolio-site</p>
     </div>
     <div class="card">
       <input placeholder="Name">
@@ -310,7 +316,7 @@ footer{
 </section>
 
 <footer>
-© 2025 Chinmay Sardesai | DevOps Portfolio
+© 2025 Chinmay Sardesai | DevOps & Cloud Portfolio
 </footer>
 
 </body>
