@@ -15,109 +15,71 @@
 }
 
 body{
-  font-family:Poppins,Arial,sans-serif;
+  font-family:'Poppins',sans-serif;
+  background:#020617;
   color:#e5e7eb;
-  background: linear-gradient(-45deg,#020617,#0f172a,#020617,#020617);
-  background-size:400% 400%;
-  animation:bgMove 15s ease infinite;
-}
-
-@keyframes bgMove{
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+  line-height:1.6;
 }
 
 .container{
-  max-width:950px;
+  max-width:1000px;
   margin:auto;
   padding:25px;
 }
 
-
+/* ---------- HEADER ---------- */
 header{
   background:linear-gradient(135deg,#0f172a,#1d4ed8,#0ea5e9);
-  padding:45px 25px;
-  border-radius:24px;
+  padding:40px 25px;
+  border-radius:20px;
   text-align:center;
-  box-shadow:0 25px 60px rgba(0,0,0,0.55);
-  position:relative;
-  overflow:hidden;
-}
-
-header::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:radial-gradient(circle at top,#38bdf855,transparent 60%);
+  box-shadow:0 20px 50px rgba(0,0,0,0.5);
 }
 
 header h1{
-  font-size:36px;
-  position:relative;
-  z-index:1;
-}
-
-.typing{
-  margin-top:6px;
+  font-size:34px;
   font-weight:600;
-  font-size:16px;
-  white-space:nowrap;
-  overflow:hidden;
-  border-right:2px solid #fff;
-  width:0;
-  animation:typing 3s steps(40,end) forwards, blink 0.8s infinite;
 }
 
-@keyframes typing{
-  to{width:100%}
-}
-@keyframes blink{
-  50%{border-color:transparent}
-}
-
-header .skills,
-header .contact{
-  margin-top:10px;
+header p{
+  margin-top:8px;
   font-size:14px;
   opacity:0.95;
-  position:relative;
-  z-index:1;
+}
+
+.skills{
+  margin-top:10px;
+  font-weight:500;
 }
 
 .resume-btn{
   display:inline-block;
-  margin-top:22px;
-  padding:13px 34px;
-  background:#ffffff;
+  margin-top:18px;
+  padding:12px 30px;
+  background:#fff;
   color:#0f172a;
-  border-radius:40px;
+  border-radius:30px;
   font-weight:600;
   text-decoration:none;
-  border:2px solid #38bdf8;
-  transition:0.35s ease;
-  position:relative;
-  z-index:1;
+  transition:0.3s;
 }
 
 .resume-btn:hover{
   background:#38bdf8;
-  color:#ffffff;
-  box-shadow:0 0 25px #38bdf8aa;
-  transform:scale(1.12);
+  color:#fff;
+  transform:scale(1.08);
 }
 
-
+/* ---------- SECTIONS ---------- */
 .section{
-  margin-top:30px;
+  margin-top:28px;
   padding:22px;
-  border-radius:20px;
-  background:rgba(2,6,23,0.7);
+  background:#02091f;
   border:1px solid #1e293b;
-  backdrop-filter:blur(6px);
+  border-radius:18px;
   opacity:0;
-  transform:translateY(30px);
-  transition:0.7s ease;
+  transform:translateY(25px);
+  transition:0.6s ease;
 }
 
 .section.show{
@@ -125,134 +87,154 @@ header .contact{
   transform:translateY(0);
 }
 
-.section:hover{
-  border-color:#38bdf8;
-  box-shadow:0 0 25px rgba(56,189,248,0.15);
-}
-
 .section h2{
+  font-size:20px;
   border-left:4px solid #38bdf8;
   padding-left:10px;
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 
-ul{padding-left:20px}
-li{margin-bottom:6px}
+ul{
+  padding-left:18px;
+}
 
+li{
+  margin-bottom:6px;
+}
 
+/* ---------- PROJECT CARDS ---------- */
+.project{
+  background:#020617;
+  padding:16px;
+  border-radius:14px;
+  border:1px solid #1e293b;
+  margin-bottom:14px;
+  transition:0.3s;
+}
+
+.project:hover{
+  border-color:#38bdf8;
+  box-shadow:0 0 18px rgba(56,189,248,0.2);
+}
+
+/* ---------- CERT BUTTONS ---------- */
 .cert-buttons{
   display:flex;
-  gap:16px;
+  gap:14px;
+  margin-top:10px;
   flex-wrap:wrap;
-  margin-top:12px;
 }
 
 .cert-btn{
-  padding:11px 22px;
+  padding:10px 22px;
   border-radius:10px;
   color:#fff;
   font-weight:600;
   text-decoration:none;
-  transition:0.35s ease;
+  transition:0.3s;
 }
 
 .cert-btn:hover{
-  transform:translateY(-4px) scale(1.06);
-  box-shadow:0 10px 25px rgba(0,0,0,0.45);
+  transform:translateY(-3px);
 }
 
 .green{background:#22c55e}
 .blue{background:#38bdf8}
 .red{background:#ef4444}
 
-
+/* ---------- FOOTER ---------- */
 footer{
-  margin-top:30px;
+  margin-top:35px;
   text-align:center;
   font-size:12px;
   color:#9ca3af;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:768px){
+  header h1{font-size:28px}
 }
 </style>
 </head>
 
 <body>
+
 <div class="container">
 
 <header>
   <h1>Chinmay Nitin Sardesai</h1>
-  <div class="typing">DevOps & Cloud Enthusiast | CSE Graduate</div>
-
-  <p class="skills">
-    Linux • Git • GitHub • AWS (EC2, S3) • CI/CD Basics
-  </p>
-
-  <p class="contact">
-    📍 Sangli | 📧 chinmaysardesai1111@gmail.com | 📞 8080207279
-  </p>
+  <p>DevOps & Cloud Enthusiast • CSE Graduate</p>
+  <p class="skills">Linux • Git • GitHub • AWS (EC2, S3) • Terraform Basics</p>
+  <p>📍 Sangli | 📧 chinmaysardesai1111@gmail.com | 📞 8080207279</p>
 
   <a href="Chinmay-Sardesai-Resume.pdf" class="resume-btn" download>
-    ↓ Download Resume
+    Download Resume
   </a>
 </header>
 
 <section class="section">
 <h2>About Me</h2>
 <p>
-Computer Science & Engineering graduate with hands-on experience in Linux, Git, GitHub and AWS.
-Focused on building a strong DevOps foundation with real-world cloud deployments.
+Computer Science graduate with hands-on experience in Linux, Git, GitHub and AWS.
+Focused on building real-world cloud infrastructure and DevOps fundamentals.
 </p>
 </section>
 
 <section class="section">
-<h2>Current DevOps Training</h2>
+<h2>Skills</h2>
 <ul>
-  <li>Linux fundamentals and server administration</li>
-  <li>Git & GitHub version control</li>
-  <li>CI/CD concepts</li>
-  <li>AWS EC2 & S3 static website hosting</li>
+  <li>Linux System Administration</li>
+  <li>Git & GitHub Version Control</li>
+  <li>AWS EC2, S3, IAM, VPC</li>
+  <li>Terraform (Infrastructure as Code)</li>
+  <li>Basic CI/CD concepts</li>
 </ul>
 </section>
 
 <section class="section">
 <h2>Projects</h2>
 
-<h3>AWS EC2 Portfolio Deployment</h3>
+<div class="project">
+<b>AWS EC2 Portfolio Deployment</b>
 <ul>
-  <li>Launched Amazon Linux EC2 instance</li>
-  <li>Configured Apache web server</li>
-  <li>Hosted portfolio via EC2 public IP</li>
-  <li>Managed security groups (HTTP & SSH)</li>
+  <li>Launched and configured Amazon Linux EC2 instance</li>
+  <li>Installed Apache web server</li>
+  <li>Hosted portfolio website using EC2 public IP</li>
 </ul>
+</div>
 
-<br>
-
-<h3>AWS S3 Static Website Hosting</h3>
+<div class="project">
+<b>AWS S3 Static Website Hosting</b>
 <ul>
-  <li>Hosted portfolio using AWS S3</li>
-  <li>Configured bucket policy & public access</li>
+  <li>Hosted static portfolio using AWS S3</li>
+  <li>Configured bucket policy and public access</li>
 </ul>
+</div>
+
+<div class="project">
+<b>Infrastructure Provisioning using Terraform</b>
+<ul>
+  <li>Created EC2 instance using Terraform</li>
+  <li>Used variables and terraform workflow</li>
+</ul>
+</div>
+
 </section>
 
 <section class="section">
 <h2>Certificates & Achievements</h2>
 
-<h3>Python Internship – WOLFOX</h3>
 <div class="cert-buttons">
-  <a href="cert-wolfox-internship.jpg" target="_blank" class="cert-btn green">View</a>
+  <a href="cert-wolfox-internship.jpg" class="cert-btn green" target="_blank">Internship</a>
+  <a href="cert-quantum-2k23.jpg" class="cert-btn blue" target="_blank">Quantum 2k23</a>
+  <a href="cert-quantum-2k24.jpg" class="cert-btn red" target="_blank">Quantum 2k24</a>
 </div>
 
-<br>
-
-<h3>Quantum 2k23 & 2k24 – Mock Placement</h3>
-<div class="cert-buttons">
-  <a href="cert-quantum-2k23.jpg" target="_blank" class="cert-btn blue">2k23</a>
-  <a href="cert-quantum-2k24.jpg" target="_blank" class="cert-btn red">2k24</a>
-</div>
 </section>
 
 <section class="section">
 <h2>Education</h2>
-<p>BTech – Computer Science & Engineering</p>
+<p>B.Tech – Computer Science & Engineering</p>
 <p>Shivaji University, Kolhapur (2021–2025)</p>
 </section>
 
@@ -263,11 +245,11 @@ Focused on building a strong DevOps foundation with real-world cloud deployments
 </div>
 
 <script>
-const sections = document.querySelectorAll('.section');
+const sections=document.querySelectorAll('.section');
 window.addEventListener('scroll',()=>{
-  const trigger = window.innerHeight*0.85;
+  const trigger=window.innerHeight*0.85;
   sections.forEach(sec=>{
-    if(sec.getBoundingClientRect().top < trigger){
+    if(sec.getBoundingClientRect().top<trigger){
       sec.classList.add('show');
     }
   });
