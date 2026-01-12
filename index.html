@@ -2,168 +2,175 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Chinmay Sardesai | DevOps & Cloud Engineer</title>
+<title>Chinmay Sardesai | DevOps Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+:root{
+  --bg:#0b1220;
+  --card:#111a2e;
+  --accent:#00d4ff;
+  --accent2:#22c55e;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
 }
 
+*{margin:0;padding:0;box-sizing:border-box}
 body{
-  font-family:'Inter',sans-serif;
-  background:#020617;
-  color:#e5e7eb;
-  line-height:1.6;
+  font-family:Poppins, sans-serif;
+  background:linear-gradient(135deg,#020617,#0b1220);
+  color:var(--text);
+  scroll-behavior:smooth;
 }
 
-/* ---------- NAVBAR ---------- */
+/* NAVBAR */
 nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#020617ee;
+  backdrop-filter:blur(8px);
+  padding:14px 50px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:18px 40px;
-  background:#020617;
-  border-bottom:1px solid #1e293b;
-  position:sticky;
-  top:0;
-  z-index:100;
 }
-
-nav .logo{
-  font-size:22px;
-  font-weight:700;
-  color:#38bdf8;
-}
-
+nav h2{color:var(--accent)}
+nav ul{display:flex;gap:22px;list-style:none}
 nav a{
-  color:#cbd5f5;
   text-decoration:none;
-  margin-left:25px;
-  font-size:14px;
-}
-
-nav a:hover{
-  color:#38bdf8;
-}
-
-/* ---------- HERO ---------- */
-.hero{
-  padding:90px 40px;
-  max-width:1100px;
-  margin:auto;
-}
-
-.hero h1{
-  font-size:42px;
-  font-weight:700;
-}
-
-.hero h1 span{
-  color:#38bdf8;
-}
-
-.hero h3{
-  margin-top:10px;
-  font-size:18px;
-  font-weight:500;
   color:#cbd5f5;
+  font-weight:500;
 }
+nav a:hover{color:var(--accent)}
 
+/* HERO */
+.hero{
+  padding:90px 50px;
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:40px;
+}
+.hero h1{
+  font-size:46px;
+}
+.hero span{color:var(--accent)}
 .hero p{
-  margin-top:20px;
-  max-width:600px;
-  color:#94a3b8;
+  margin-top:12px;
+  color:var(--muted);
+  max-width:520px;
 }
-
-.hero .buttons{
-  margin-top:30px;
+.hero .btns{
+  margin-top:26px;
+  display:flex;
+  gap:16px;
 }
-
-.hero .btn{
-  display:inline-block;
-  padding:14px 28px;
-  border-radius:8px;
+.btn{
+  padding:12px 28px;
+  border-radius:30px;
   font-weight:600;
   text-decoration:none;
-  margin-right:15px;
-  transition:0.3s;
 }
-
-.btn-primary{
-  background:#38bdf8;
+.btn.primary{
+  background:var(--accent);
   color:#020617;
 }
-
-.btn-primary:hover{
-  background:#0ea5e9;
+.btn.outline{
+  border:2px solid var(--accent);
+  color:var(--accent);
+}
+.hero-card{
+  background:var(--card);
+  border-radius:22px;
+  padding:30px;
+  box-shadow:0 20px 50px rgba(0,0,0,.5);
 }
 
-.btn-outline{
-  border:2px solid #38bdf8;
-  color:#38bdf8;
-}
-
-.btn-outline:hover{
-  background:#38bdf8;
-  color:#020617;
-}
-
-/* ---------- SECTIONS ---------- */
+/* SECTION */
 section{
-  max-width:1100px;
-  margin:60px auto;
-  padding:0 40px;
+  padding:80px 50px;
 }
-
-section h2{
-  font-size:28px;
-  margin-bottom:20px;
-  border-left:4px solid #38bdf8;
-  padding-left:12px;
+.section-title{
+  font-size:34px;
+  margin-bottom:40px;
 }
+.section-title span{color:var(--accent)}
 
-/* ---------- CARDS ---------- */
+/* ABOUT */
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
 .card{
+  background:var(--card);
+  border-radius:20px;
+  padding:28px;
+}
+
+/* SKILLS */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:20px;
+}
+.skill{
+  background:var(--card);
+  padding:26px;
+  border-radius:18px;
+  text-align:center;
+  transition:.3s;
+}
+.skill:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 25px rgba(0,212,255,.3);
+}
+.skill h4{margin-top:10px}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+}
+
+/* EDUCATION */
+.edu{
+  display:grid;
+  gap:20px;
+}
+
+/* CONTACT */
+.contact{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+input,textarea{
+  width:100%;
+  padding:14px;
+  border-radius:12px;
+  border:none;
   background:#020617;
-  border:1px solid #1e293b;
-  border-radius:14px;
-  padding:25px;
-  margin-bottom:25px;
+  color:#fff;
+  margin-bottom:14px;
 }
 
-.card:hover{
-  border-color:#38bdf8;
-}
-
-/* ---------- LIST ---------- */
-ul{
-  padding-left:20px;
-}
-
-li{
-  margin-bottom:8px;
-  color:#cbd5f5;
-}
-
-/* ---------- FOOTER ---------- */
+/* FOOTER */
 footer{
   text-align:center;
-  padding:30px;
-  border-top:1px solid #1e293b;
-  color:#94a3b8;
-  font-size:14px;
+  padding:25px;
+  color:var(--muted);
+  background:#020617;
 }
 
-/* ---------- RESPONSIVE ---------- */
-@media(max-width:768px){
-  .hero h1{font-size:32px}
-  nav{padding:15px 20px}
-  section{padding:0 20px}
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero,.about,.contact{grid-template-columns:1fr}
+  nav{padding:14px 20px}
+  section{padding:70px 20px}
 }
 </style>
 </head>
@@ -172,97 +179,113 @@ footer{
 
 <!-- NAV -->
 <nav>
-  <div class="logo">Chinmay.</div>
-  <div>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
+  <h2>Chinmay.</h2>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
 <!-- HERO -->
-<div class="hero">
-  <h1>Hi, I'm <span>Chinmay Sardesai</span></h1>
-  <h3>DevOps & Cloud Engineer | Fresher</h3>
-
-  <p>
-    Computer Science graduate passionate about cloud infrastructure,
-    automation and modern DevOps practices. Actively seeking
-    entry-level DevOps / Cloud Engineer opportunities.
-  </p>
-
-  <div class="buttons">
-    <a href="Chinmay-Sardesai-Resume.pdf" class="btn btn-primary" download>
-      Download Resume
-    </a>
-    <a href="#projects" class="btn btn-outline">
-      View Projects
-    </a>
+<section class="hero" id="home">
+  <div>
+    <h1>Hi, I'm <span>Chinmay Sardesai</span></h1>
+    <p>
+      DevOps & Cloud Enthusiast focused on Linux, AWS and Infrastructure Automation.
+      Passionate about building scalable and secure cloud solutions.
+    </p>
+    <div class="btns">
+      <a href="Chinmay-Sardesai-Resume.pdf" class="btn primary">Download Resume</a>
+      <a href="#contact" class="btn outline">Contact Me</a>
+    </div>
   </div>
-</div>
+
+  <div class="hero-card">
+    <h3>Quick Info</h3><br>
+    📍 Sangli, Maharashtra <br><br>
+    📧 chinmaysardesai1111@gmail.com <br><br>
+    ☁️ AWS | Linux | Git | Terraform
+  </div>
+</section>
 
 <!-- ABOUT -->
 <section id="about">
-  <h2>About Me</h2>
-  <div class="card">
-    <p>
-      I am a Computer Science & Engineering graduate with hands-on experience
-      in Linux, Git, GitHub and AWS. I enjoy working on real-world cloud
-      deployments and learning how scalable infrastructure is built and managed.
-    </p>
+  <h2 class="section-title">About <span>Me</span></h2>
+  <div class="about">
+    <div class="card">
+      Computer Science graduate with hands-on experience in Linux administration,
+      AWS EC2 & S3 deployments and Infrastructure as Code concepts.
+    </div>
+    <div class="card">
+      Looking for fresher opportunities in DevOps / Cloud Engineering where I can
+      apply automation and cloud best practices.
+    </div>
   </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
-  <h2>Skills</h2>
-  <div class="card">
-    <ul>
-      <li>Linux system administration</li>
-      <li>Git & GitHub version control</li>
-      <li>AWS EC2, S3, IAM basics</li>
-      <li>CI/CD fundamentals</li>
-      <li>Infrastructure basics (VPC, Security Groups)</li>
-    </ul>
+  <h2 class="section-title">Skills & <span>Tools</span></h2>
+  <div class="skills">
+    <div class="skill"><h4>Linux</h4></div>
+    <div class="skill"><h4>AWS EC2</h4></div>
+    <div class="skill"><h4>AWS S3</h4></div>
+    <div class="skill"><h4>Git & GitHub</h4></div>
+    <div class="skill"><h4>Terraform</h4></div>
+    <div class="skill"><h4>CI/CD Basics</h4></div>
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-  <h2>Projects</h2>
-
-  <div class="card">
-    <h3>AWS EC2 Portfolio Deployment</h3>
-    <ul>
-      <li>Launched and managed EC2 instance</li>
-      <li>Configured Apache web server</li>
-      <li>Deployed portfolio using public IP</li>
-      <li>Configured security groups (HTTP & SSH)</li>
-    </ul>
+  <h2 class="section-title">Projects</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>AWS EC2 Portfolio Deployment</h3>
+      <p>Hosted portfolio website on EC2 using Apache and Security Groups.</p>
+    </div>
+    <div class="card">
+      <h3>AWS S3 Static Website</h3>
+      <p>Configured S3 bucket policy and public access for static hosting.</p>
+    </div>
   </div>
+</section>
 
-  <div class="card">
-    <h3>AWS S3 Static Website Hosting</h3>
-    <ul>
-      <li>Hosted static website using S3</li>
-      <li>Configured bucket policy and public access</li>
-    </ul>
+<!-- EDUCATION -->
+<section id="education">
+  <h2 class="section-title">Education</h2>
+  <div class="edu">
+    <div class="card">
+      <h3>B.Tech – Computer Science</h3>
+      Shivaji University, Kolhapur (2021–2025)
+    </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <h2>Contact</h2>
-  <div class="card">
-    <p>📍 Sangli, Maharashtra</p>
-    <p>📧 chinmaysardesai1111@gmail.com</p>
-    <p>📞 8080207279</p>
+  <h2 class="section-title">Get In <span>Touch</span></h2>
+  <div class="contact">
+    <div class="card">
+      <h3>Contact Info</h3><br>
+      📧 chinmaysardesai1111@gmail.com <br><br>
+      📞 8080207279
+    </div>
+    <div class="card">
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Email">
+      <textarea rows="4" placeholder="Message"></textarea>
+      <a class="btn primary">Send Message</a>
+    </div>
   </div>
 </section>
 
 <footer>
-© 2025 Chinmay Sardesai • DevOps & Cloud Portfolio
+© 2025 Chinmay Sardesai | DevOps Portfolio
 </footer>
 
 </body>
