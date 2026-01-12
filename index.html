@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Chinmay Portfolio | DevOps & Cloud</title>
+<title>Chinmay Portfolio | DevOps & Cloud Engineer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -10,8 +10,8 @@
 
 <style>
 :root{
-  --bg:#0b1220;
-  --card:#111827;
+  --bg:#0a1020;
+  --card:#121a33;
   --accent:#4f9cf9;
   --accent2:#2dd4bf;
   --text:#e5e7eb;
@@ -20,7 +20,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{
   font-family:Poppins,sans-serif;
-  background:linear-gradient(135deg,#020617,#0b1220);
+  background:radial-gradient(circle at top,#0f172a,#020617 65%);
   color:var(--text);
 }
 
@@ -29,14 +29,14 @@ nav{
   position:sticky;
   top:0;
   z-index:1000;
-  background:#020617ee;
+  background:#020617dd;
   backdrop-filter:blur(10px);
   padding:14px 60px;
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
-nav h2{color:var(--accent)}
+nav h2{color:var(--accent);font-weight:700}
 nav ul{list-style:none;display:flex;gap:26px}
 nav a{
   color:#cbd5f5;
@@ -54,15 +54,25 @@ nav a:hover{color:var(--accent)}
 }
 .hero h1{font-size:48px}
 .hero span{color:var(--accent)}
-.hero p{margin-top:14px;color:var(--muted);max-width:540px}
+.hero p{
+  margin-top:14px;
+  color:var(--muted);
+  max-width:540px;
+}
 
-.hero-links{
+.hero-tags{
   margin-top:18px;
   display:flex;
-  gap:20px;
-  font-weight:600;
+  gap:18px;
+  flex-wrap:wrap;
 }
-.hero-links i{color:var(--accent)}
+.hero-tags span{
+  background:#020617;
+  padding:8px 16px;
+  border-radius:20px;
+  font-size:14px;
+  border:1px solid #1e293b;
+}
 
 .btns{
   margin-top:30px;
@@ -90,7 +100,7 @@ nav a:hover{color:var(--accent)}
 
 /* HERO CARD */
 .hero-card{
-  background:var(--card);
+  background:linear-gradient(145deg,#0f172a,#111827);
   border-radius:24px;
   padding:34px;
 }
@@ -108,6 +118,7 @@ section{padding:90px 60px}
   background:var(--card);
   border-radius:22px;
   padding:30px;
+  border:1px solid #1e293b;
 }
 
 /* ABOUT */
@@ -150,13 +161,13 @@ section{padding:90px 60px}
 }
 .contact p{
   font-size:18px;
-  margin-bottom:16px;
+  margin-bottom:18px;
 }
 input,textarea{
   width:100%;
   padding:14px;
   border-radius:14px;
-  border:none;
+  border:1px solid #1e293b;
   background:#020617;
   color:#fff;
   margin-bottom:14px;
@@ -176,6 +187,7 @@ footer{
   nav{padding:14px 22px}
   .hero,.about,.contact{grid-template-columns:1fr}
   section{padding:80px 22px}
+  .hero h1{font-size:38px}
 }
 </style>
 </head>
@@ -199,13 +211,13 @@ footer{
     <h1>Hi, I'm <span>Chinmay Sardesai</span></h1>
     <p>
       DevOps & Cloud Enthusiast with hands-on experience in Linux, AWS and
-      infrastructure automation. Focused on building real-world cloud solutions.
+      infrastructure automation. Passionate about real-world cloud deployments.
     </p>
 
-    <div class="hero-links">
+    <div class="hero-tags">
       <span><i class="fab fa-linkedin"></i> LinkedIn</span>
       <span><i class="fab fa-aws"></i> AWS</span>
-      <span><i class="fas fa-cogs"></i> DevOps</span>
+      <span><i class="fas fa-cloud"></i> DevOps</span>
     </div>
 
     <div class="btns">
@@ -225,12 +237,12 @@ footer{
   <h2 class="title">About <span>Me</span></h2>
   <div class="about">
     <div class="card">
-      Computer Science graduate with strong Linux fundamentals, AWS cloud knowledge
-      and interest in DevOps automation.
+      Computer Science graduate with strong Linux fundamentals, AWS services
+      knowledge and interest in DevOps automation.
     </div>
     <div class="card">
-      Comfortable with hands-on labs, deployments and learning production-style
-      cloud environments.
+      Comfortable with hands-on labs, cloud deployments and learning
+      production-style environments.
     </div>
   </div>
 </section>
@@ -254,11 +266,11 @@ footer{
   <div class="projects">
     <div class="card">
       <h3>Portfolio Website on AWS EC2</h3>
-      Deployed Linux EC2, configured Apache, security groups and hosted portfolio.
+      Deployed Linux EC2, configured Apache and hosted portfolio.
     </div>
     <div class="card">
-      <h3>Static Website on AWS S3</h3>
-      Hosted static site with bucket policy and public access.
+      <h3>Static Website Hosting on AWS S3</h3>
+      Hosted static site with public access and bucket policy.
     </div>
     <div class="card">
       <h3>Terraform EC2 Automation</h3>
@@ -273,7 +285,7 @@ footer{
     <div class="card">10th – Gotkhindi Vidyalay, Gotkhindi</div>
     <div class="card">12th – Gotkhindi Vidyalay Jr. College, Gotkhindi</div>
     <div class="card">
-      Bachelor of Computer Science & Engineering<br>
+      B.Tech – Computer Science & Engineering<br>
       D. Y. Patil Technical Campus, Talsande<br>
       Shivaji University (2021–2025)
     </div>
